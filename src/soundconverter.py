@@ -260,24 +260,32 @@ def vfs_exists(filename):
 	except:
 		return False
 
+def filename_to_uri(filename):
+	"""Convert a filename to a valid uri.
+	Filename can be a relative or absolute path, or an uri.
+	"""
+	url = urlparse.urlparse(filename)
+	if not url[0]:
+		filename = urllib.pathname2url(os.path.abspath(filename))
+		filename = str(gnomevfs.URI(filename))
+	return filename
+
 # GStreamer gnomevfssrc helpers
 
 def vfs_encode_filename(filename):
-	filename = filename.replace("%252f", "/")
+	filename = filename_to_uri(filename)
+	#filename = filename.replace("%252f", "/")
 	return filename
 
 def file_encode_filename(filename):
 	filename = gnomevfs.get_local_path_from_uri(filename)
 	filename = filename.replace(" ", "\ ");
-	filename = filename.replace("%2f", "/");
+	#filename = filename.replace("%2f", "/");
 	return filename
-	
 
 def unquote_filename(filename):
-
 	f= urllib.unquote(filename)
 	return f
-
 
 def format_tag(tag):
 	if isinstance(tag, list):
@@ -384,32 +392,18 @@ class SoundConverterException(Exception):
 		self.secondary = secondary
 		
 
-def filename_to_uri(filename):
-	"""Convert a filename to a valid uri.
-	Filename can be a relative or absolute path, or an uri.
-	"""
-	if vfs_exists(filename):
-		url = urlparse.urlparse(filename)
-		if not url[0]:
-			filename = urllib.pathname2url(filename)
-
-		return str(gnomevfs.URI(filename))
-	else:
-		return "file://" + urllib.quote(os.path.abspath(filename))
-
 
 class SoundFile:
 
 	"""Meta data information about a sound file (uri, tags)."""
 
-	#def __init__(self, base_path, filename=None):
 	def __init__(self, uri, base_path=None):
 
 		self.uri = uri
 
 		if base_path:
 			self.base_path = base_path
-			self.filename = uri[len(base_path):]
+			self.filename = self.uri[len(self.base_path):]
 		else:
 			self.base_path, self.filename = os.path.split(self.uri)
 			self.base_path += "/"
