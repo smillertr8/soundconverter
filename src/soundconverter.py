@@ -88,8 +88,8 @@ try:
 	
 	if pynotify.init("Basics"):
 		def notification(message):
-		    n = pynotify.Notification(NAME, message)
-		    n.show()
+			n = pynotify.Notification(NAME, message)
+			n.show()
 except ImportError:
 	pass
 
