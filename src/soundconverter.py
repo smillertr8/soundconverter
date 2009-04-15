@@ -1543,6 +1543,7 @@ class PreferencesDialog:
 	def __init__(self, glade):
 		self.gconf = gconf.client_get_default()
 		self.gconf.add_dir(self.root, gconf.CLIENT_PRELOAD_ONELEVEL)
+		self.glade = glade
 		self.dialog = glade.get_widget("prefsdialog")
 		self.into_selected_folder = glade.get_widget("into_selected_folder")
 		self.target_folder_chooser = glade.get_widget("target_folder_chooser")
@@ -1651,13 +1652,19 @@ class PreferencesDialog:
 			w = glade.get_widget("lame_absent")
 			w.show()
 
+		# vorbis quality
+		quality = int(self.get_float("vorbis-quality") * 10)
+		quality_preset = {0:0, 2:1, 4:2, 6:3, 8:4, 10:5}
+
+		w = glade.get_widget("vorbis_quality_slider")
+		w.set_value(quality)
+
 		w = glade.get_widget("vorbis_quality")
-		quality = self.get_float("vorbis-quality")
-		quality_setting = {0:0 ,0.2:1 ,0.4:2 ,0.6:3 , 0.8:4, 1.0:5}
-		w.set_active(5)
-		for k, v in quality_setting.iteritems():
-			if abs(quality-k) < 0.01:
-				w.set_active(v)
+		if quality in quality_preset:
+			w.set_active(quality_preset[quality])
+		else:
+			w.set_active(quality_preset[quality-1])
+
 		if self.get_int("vorbis-oga-extension"):
 			self.vorbis_oga_extension.set_active(True)
 
@@ -1980,7 +1987,27 @@ class PreferencesDialog:
 
 	def on_vorbis_quality_changed(self, combobox):
 		quality = (0,0.2,0.4,0.6,0.8,1.0)
-		self.set_float("vorbis-quality", quality[combobox.get_active()])
+		quality = quality[combobox.get_active()]
+		self.set_float("vorbis-quality", quality)
+		slider = self.glade.get_widget("vorbis_quality_slider")
+		slider.set_value(quality*10)
+		self.update_example()
+
+	def on_vorbis_quality_slider_changed(self, slider):
+		#import pdb; pdb.set_trace()
+		quality = slider.get_adjustment().get_value()/10
+		self.set_float("vorbis-quality", quality)
+
+		# also maybe alter the menu's setting
+		menu = self.glade.get_widget("vorbis_quality")
+		quality_setting = {0:0 ,0.2:1 ,0.4:2 ,0.6:3 , 0.8:4, 1.0:5}
+		if quality in quality_setting:
+			menu.set_active(quality_setting[quality])
+
+		#for k, v in quality_setting.iteritems():
+		#	if abs(quality-k) < 0.01:
+		#		menu.set_active(v)
+
 		self.update_example()
 
 	def on_vorbis_oga_extension_toggled(self, toggle):
