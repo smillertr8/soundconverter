@@ -88,8 +88,13 @@ try:
 	
 	if pynotify.init("Basics"):
 		def notification(message):
+<<<<<<< HEAD:src/soundconverter.py
 			n = pynotify.Notification(NAME, message)
 			n.show()
+=======
+		    n = pynotify.Notification(NAME, message)
+		    n.show()
+>>>>>>> origin/master:src/soundconverter.py
 except ImportError:
 	pass
 
@@ -209,7 +214,7 @@ def vfs_walk(uri):
 	try:
 		dirlist = gnomevfs.open_directory(uri)
 	except:
-		log(_("skipping: '%s'") % uri)
+		log("skipping: '%s'" % uri)
 		return filelist
 		
 	for file_info in dirlist:
@@ -226,7 +231,7 @@ def vfs_walk(uri):
 		except ValueError:
 			# this can happen when you do not have sufficent
 			# permissions to read file info.
-			log(_("skipping: '%s'") % uri)
+			log("skipping: '%s'" % uri)
 	return filelist
 
 def vfs_makedirs(path_to_create):
@@ -554,6 +559,8 @@ class TargetNameGenerator:
 			folder = self.folder
 			
 		result = os.path.join(folder, urllib.quote(result))
+
+		assert result[0] != '/', result
 
 		return result
 
@@ -1068,7 +1075,7 @@ class TagReader(Decoder):
 		if new == gst.STATE_PLAYING:
 			debug("TagReading done...")
 			self.finish()
-
+		
 	def found_tag(self, decoder, something, taglist):
 		#debug("found_tags:", self.sound_file.get_filename_for_display())
 		#debug("\ttitle=%s" % (taglist["title"]))
@@ -1080,8 +1087,6 @@ class TagReader(Decoder):
 									taglist[k].month, taglist[k].day)"""
 			
 		self.sound_file.add_tags(taglist)
-
-		#self.found_tags = True
 		self.sound_file.have_tags = True
 
 		try:
@@ -1090,7 +1095,7 @@ class TagReader(Decoder):
 			pass
 
 	def work(self):
-		if not self.pipeline:
+		if not self.pipeline or self.eos:
 			return False
 		
 		if not self.run_start_time:
@@ -1184,7 +1189,7 @@ class Converter(Decoder):
 		uri = gnomevfs.URI(self.output_filename)
 		dirname = uri.parent
 		if dirname and not gnomevfs.exists(dirname):
-			log(_("Creating folder: '%s'") % dirname)
+			log("Creating folder: '%s'" % dirname)
 			if not vfs_makedirs(str(dirname)):
 				# TODO add error management
 				dialog = gtk.MessageDialog(None, gtk.DIALOG_MODAL, gtk.MESSAGE_ERROR,
@@ -1210,17 +1215,24 @@ class Converter(Decoder):
 			info = gnomevfs.get_file_info( self.sound_file.get_uri(),gnomevfs.FILE_INFO_FIELDS_PERMISSIONS)
 			gnomevfs.set_file_info(self.output_filename, info, gnomevfs.SET_FILE_INFO_PERMISSIONS)
 		except:
-			log(_("Cannot set permission on '%s'") % gnomevfs.format_uri_for_display(self.output_filename))
+			log("Cannot set permission on '%s'" % gnomevfs.format_uri_for_display(self.output_filename))
 
 		if self.delete_original and self.processing and not self.error:
 			log("deleting: '%s'" % self.sound_file.get_uri())
 			gnomevfs.unlink(self.sound_file.get_uri())
 
+<<<<<<< HEAD:src/soundconverter.py
 	def on_error(self, error):
 		error.show("<b>%s</b>" % _("GStreamer Error:"), "%s\n<i>(%s)</i>" % (err,
 			self.sound_file.get_filename_for_display()))
 
 
+=======
+	def on_error(self, err):
+		error.show("<b>%s</b>" % _("GStreamer Error:"), "%s\n<i>(%s)</i>" % (err,
+			self.sound_file.get_filename_for_display()))
+
+>>>>>>> origin/master:src/soundconverter.py
 	def get_position(self):
 		return self.position
 	
@@ -1363,6 +1375,8 @@ class FileList:
 		self.window.set_status(_('Adding files...'))
 		
 		for uri in uris:
+			if not uri:
+				continue
 			if uri.startswith('cdda:'):
 				error.show("Cannot read from Audio CD.",
 					"Use SoundJuicer Audio CD Extractor instead.")
@@ -1379,7 +1393,7 @@ class FileList:
 				log('access denied: \'%s\'' % uri)
 				continue
 			except TypeError, e:
-				log('error: %s (%s)' % (e, uri))
+				log('add error: %s (\'%s\')' % (e, uri))
 				continue
 			except :
 				log('error in get_file_info: %s' % (uri))
@@ -1401,7 +1415,7 @@ class FileList:
 		for f in files:
 			sound_file = SoundFile(f, base)
 			if sound_file.get_uri() in self.filelist:
-				log(_("file already present: '%s'") % sound_file.get_uri())
+				log("file already present: '%s'" % sound_file.get_uri())
 				continue 
 			self.filelist[sound_file.get_uri()] = True
 
@@ -1412,13 +1426,16 @@ class FileList:
 		if files and not self.typefinders.is_running():
 			self.typefinders.queue_ended = self.typefinder_queue_ended
 			self.typefinders.run()
+		else:
+			self.window.set_status()
+			
 
 	def typefinder_queue_ended(self):
 		self.window.set_status()
 
 	def format_cell(self, sound_file):
 		
-		template_tags		 = "%(artist)s - <i>%(album)s</i> - <b>%(title)s</b>\n<small>%(filename)s</small>"
+		template_tags = "%(artist)s - <i>%(album)s</i> - <b>%(title)s</b>\n<small>%(filename)s</small>"
 		template_loading = "<i>%s</i>\n<small>%%(filename)s</small>" \
 							% _("loading tags...")
 		template_notags  = '<span foreground="red">%s</span>\n<small>%%(filename)s</small>' \
@@ -1739,14 +1756,14 @@ class PreferencesDialog:
 
 
 	def update_example(self):
-		sound_file = SoundFile(os.path.expanduser("~/foo/bar.flac"))
+		sound_file = SoundFile("foo/bar.flac")
 		sound_file.add_tags({
 			"track-number": 1L,
 			"track-count": 99L,
 		})
 		sound_file.add_tags(locale_patterns_dict)
 
-		s = markup_escape(self.generate_filename(sound_file, for_display=True))
+		s = markup_escape(beautify_uri(self.generate_filename(sound_file, for_display=True)))
 		p = 0
 		replaces = []
 
@@ -2045,7 +2062,7 @@ class ConverterQueueCanceled(SoundConverterException):
 	"""Exception thrown when a ConverterQueue is canceled."""
 
 	def __init__(self):
-		SoundConverterException.__init__(self, _("Convertion Canceled"), "")
+		SoundConverterException.__init__(self, _("Conversion Canceled"), "")
 
 
 class ConverterQueue(TaskQueue):
@@ -2448,9 +2465,9 @@ class SoundConverterWindow:
 			for sound_file in self.filelist.get_files():
 				self.converter.add(sound_file)
 		except ConverterQueueCanceled:
-			log(_("canceling conversion."))
+			log("cancelling conversion.")
 			self.conversion_ended()
-			self.set_status(_("Conversion canceled"))
+			self.set_status(_("Conversion cancelled"))
 		else:
 			self.set_status("")
 			self.converter.run()
