@@ -38,6 +38,12 @@ import urllib
 import time
 import unicodedata
 
+# we prefer to launch locally present glade file
+# so we can launch from source folder, without installing
+LOCAL_GLADE = "../data/soundconverter.glade"
+if os.path.exists(LOCAL_GLADE):
+	GLADE = LOCAL_GLADE
+
 # GNOME and related stuff.
 try:
 	import pygtk
@@ -1570,11 +1576,10 @@ class PreferencesDialog:
 		self.set_widget_initial_values(glade)
 		self.set_sensitive()
 
-		tips = gtk.Tooltips()
-		tip = _("Available patterns:")
+		tip = [_("Available patterns:")]
 		for k in locale_patterns_dict.values():
-			tip += "\n" + k
-		tips.set_tip(self.custom_filename, tip)
+			tip.append(k)
+		self.custom_filename.set_tooltip_text('\n'.join(tip))
 
 
 	def convert_setting_from_old_version(self):

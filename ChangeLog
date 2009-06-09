@@ -5,10 +5,18 @@
 	  Plus some minor changes in autogen.
 	  (Thanks Uwe)
 
+2009-05-27  Gautier Portet <kassoulet gmail com>
+
+	* src/soundconverter.py: Change deprecated Tooltip code.
+	  SoundConverter now requires GTK 2.12+!
+	  (thanks Matt)
+
 2009-05-19  Gautier Portet <kassoulet gmail com>
 
 	* src/soundconverter.py: Reset status after clearing file list.
 	  (Thanks Sean)
+	* src/soundconverter.py: Allow loading glade file from source folder.
+	  (Thanks Geoff)
 
 2009-05-04  Gautier Portet <kassoulet gmail com>
 
@@ -30,7 +38,6 @@
 2009-03-11  Gautier Portet <kassoulet gmail com>
 
 	* src/soundconverter.py: Sanitize URI handling.
-
 
 2009-03-10  Gautier Portet <kassoulet gmail com>
 
