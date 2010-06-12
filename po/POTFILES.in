@@ -1,0 +1,4 @@
+[encoding: UTF-8]
+data/soundconverter.desktop.in.in
+data/soundconverter.glade
+src/soundconverter.py
