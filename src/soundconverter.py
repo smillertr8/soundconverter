@@ -925,6 +925,7 @@ class Pipeline(BackgroundTask):
 
 		elif t == gst.MESSAGE_TAG:
 			self.found_tag(self, '', message.parse_tag())
+
 		return True
 
 	def play(self):
