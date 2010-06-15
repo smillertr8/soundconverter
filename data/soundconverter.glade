@@ -15,7 +15,6 @@
     <child>
       <widget class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
-        <property name="orientation">vertical</property>
         <child>
           <widget class="GtkMenuBar" id="menubar">
             <property name="visible">True</property>
@@ -292,11 +291,9 @@
         <child>
           <widget class="GtkVBox" id="vbox20">
             <property name="visible">True</property>
-            <property name="orientation">vertical</property>
             <child>
               <widget class="GtkVBox" id="progress_frame">
                 <property name="border_width">6</property>
-                <property name="orientation">vertical</property>
                 <property name="spacing">6</property>
                 <child>
                   <widget class="GtkHBox" id="hbox23">
@@ -498,8 +495,10 @@ Thanks to:
 
 
 
+
 </property>
     <property name="documenters">No documentation written.
+
 
 
 
@@ -533,7 +532,6 @@ Thanks to:
     <child internal-child="vbox">
       <widget class="GtkVBox" id="dialog-vbox3">
         <property name="visible">True</property>
-        <property name="orientation">vertical</property>
         <child>
           <widget class="GtkHBox" id="hbox3">
             <property name="visible">True</property>
@@ -553,7 +551,6 @@ Thanks to:
             <child>
               <widget class="GtkVBox" id="vbox18">
                 <property name="visible">True</property>
-                <property name="orientation">vertical</property>
                 <child>
                   <widget class="GtkLabel" id="label33">
                     <property name="visible">True</property>
@@ -676,12 +673,11 @@ Thanks to:
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Where to place results?</property>
     <property name="type_hint">dialog</property>
-    <property name="action">select-folder</property>
     <property name="local_only">False</property>
+    <property name="action">select-folder</property>
     <child internal-child="vbox">
       <widget class="GtkVBox" id="dialog-vbox5">
         <property name="visible">True</property>
-        <property name="orientation">vertical</property>
         <property name="spacing">24</property>
         <child internal-child="action_area">
           <widget class="GtkHButtonBox" id="dialog-action_area5">
@@ -740,7 +736,6 @@ Thanks to:
     <child internal-child="vbox">
       <widget class="GtkVBox" id="dialog-vbox6">
         <property name="visible">True</property>
-        <property name="orientation">vertical</property>
         <child>
           <widget class="GtkHBox" id="hbox14">
             <property name="visible">True</property>
@@ -762,7 +757,6 @@ Thanks to:
             <child>
               <widget class="GtkVBox" id="vbox11">
                 <property name="visible">True</property>
-                <property name="orientation">vertical</property>
                 <child>
                   <widget class="GtkLabel" id="primary_error_label">
                     <property name="visible">True</property>
@@ -840,12 +834,10 @@ Thanks to:
     <child internal-child="vbox">
       <widget class="GtkVBox" id="dialog-vbox7">
         <property name="visible">True</property>
-        <property name="orientation">vertical</property>
         <child>
           <widget class="GtkVBox" id="vbox12">
             <property name="visible">True</property>
             <property name="border_width">12</property>
-            <property name="orientation">vertical</property>
             <property name="spacing">12</property>
             <child>
               <widget class="GtkFrame" id="frame1">
@@ -1040,7 +1032,6 @@ artist - album</property>
                     <child>
                       <widget class="GtkVBox" id="vbox13">
                         <property name="visible">True</property>
-                        <property name="orientation">vertical</property>
                         <property name="spacing">4</property>
                         <child>
                           <widget class="GtkComboBox" id="basename_pattern">
@@ -1177,7 +1168,6 @@ track_title
                     <child>
                       <widget class="GtkVBox" id="vbox14">
                         <property name="visible">True</property>
-                        <property name="orientation">vertical</property>
                         <child>
                           <widget class="GtkHBox" id="hbox19">
                             <property name="visible">True</property>
@@ -1226,7 +1216,6 @@ AAC (.m4a)</property>
                             <child>
                               <widget class="GtkVBox" id="vbox21">
                                 <property name="visible">True</property>
-                                <property name="orientation">vertical</property>
                                 <property name="spacing">4</property>
                                 <child>
                                   <widget class="GtkTable" id="table3">
@@ -1751,7 +1740,6 @@ Insanely High</property>
             </child>
             <child>
               <widget class="GtkVBox" id="lame_absent">
-                <property name="orientation">vertical</property>
                 <property name="spacing">4</property>
                 <child>
                   <widget class="GtkHSeparator" id="hseparator1"/>
@@ -1866,7 +1854,6 @@ Insanely High</property>
     <child internal-child="vbox">
       <widget class="GtkVBox" id="dialog-vbox8">
         <property name="visible">True</property>
-        <property name="orientation">vertical</property>
         <child>
           <widget class="GtkFileChooserWidget" id="filechooserwidget">
             <property name="visible">True</property>

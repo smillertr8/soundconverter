@@ -1811,8 +1811,14 @@ class PreferencesDialog(GladeWindow, GConfStore):
 		if self.get_int('output-resample'):
 			self.resample_toggle.set_active(self.get_int('output-resample'))
 			self.resample_rate.set_sensitive(1)
-			rr_entry = glade.get_widget("resample_rate-entry")
-			rr_entry.set_text('%d' % (self.get_int('resample-rate')))
+			rates = [11025, 22050, 44100, 48000, 72000, 96000, 128000]
+			rate = self.get_int('resample-rate')
+			try:
+				idx = rates.index(rate)
+			except ValueError:
+				self.resample_rate.insert_text(0, str(rate))
+				idx = 0
+			self.resample_rate.set_active(idx)
 
 		self.force_mono.set_active(self.get_int('force-mono'))
 
