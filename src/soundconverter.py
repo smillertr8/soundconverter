@@ -782,18 +782,21 @@ class TaskQueue(BackgroundTask):
 			task.add_listener('finished', self.task_finished)
 			task.start()
 			self.count += 1
-		self.progress = float(self.finished_tasks) / (
-			len(self.waiting_tasks) + self.finished_tasks)
+		total = len(self.waiting_tasks) + self.finished_tasks
+		self.progress = float(self.finished_tasks) / total if total else 0
 
 	def started(self):
 		""" BackgroundTask setup callback """
 		self.start_time = time.time()
+		self.count = 0
+		self.finished_tasks = 0
 		self.start_next_task()
 
 	def finished(self):
 		""" BackgroundTask finish callback """
 		log('Queue done in %.3fs (%s tasks)' % (time.time() - self.start_time, self.count))
 		self.queue_ended()
+		self.running = False
 
 	def task_finished(self, task=None):
 		if not self.running_tasks:
@@ -2736,7 +2739,7 @@ class SoundConverterWindow(GladeWindow):
 	def display_progress(self, remaining):
 		done = self.converter.finished_tasks
 		total = done + len(self.converter.waiting_tasks) + len(self.converter.running_tasks)
-		self.progressbar.set_text(_('Converting file %d of %d  (%s)') % ( done, total, remaining ))
+		self.progressbar.set_text(_('Converting file %d of %d  (%s)') % ( done + 1, total, remaining ))
 
 	def set_progress(self, done_so_far, total, current_file=None):
 		if (total==0) or (done_so_far==0):
