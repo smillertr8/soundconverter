@@ -4,6 +4,8 @@
 	  duplicate mp3 entry in desktop file.
 	  (Thanks Michael, closes #17269, #17268 and #17266)
 
+	  release 1.5.3 (1.5.2 was broken)
+
 2010-06-13  Gautier Portet <kassoulet gmail com>
 
 	* src/soundconverter.py: Fix typo preventing SoundConverter to run.
