@@ -419,7 +419,9 @@ encoders = (
 	('id3v2mux',	'MP3 Tags'),
 	('xingmux',		'Xing Header'),
 	('lame',		'MP3'),
-	('faac',        'AAC'))
+	('faac',        'AAC'),
+	('mp4mux',      'AAC'),
+	)
 
 for encoder, name in encoders:
 	have_it = bool(gst.element_factory_find(encoder))
@@ -1316,7 +1318,7 @@ class Converter(Decoder):
 		return cmd
 
 	def add_aac_encoder(self):
-		return 'faac profile=2 bitrate=%s ! ffmux_mp4' % \
+		return 'faac profile=2 bitrate=%s ! mp4mux' % \
 			(self.aac_quality * 1000)
 
 

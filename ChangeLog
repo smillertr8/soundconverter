@@ -1,3 +1,10 @@
+2010-06-24  Gautier Portet <kassoulet gmail com>
+
+	* src/soundconverter.py: Fix track number/count missing when writing to
+	  AAC files.
+
+	  (thanks Montel and Tim-Philipp, fixes #17291)
+
 2010-06-16  Gautier Portet <kassoulet gmail com>
 
 	* src/soundconverter.py: Fix progress bar oddities, crash in TaskQueue and
