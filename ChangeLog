@@ -1,5 +1,9 @@
 2010-06-24  Gautier Portet <kassoulet gmail com>
+	* src/soundconverter.py: Destination filename was url encoded when stored
+	  in gconf.
+	  (thanks Simón, fixes #17291)
 
+2010-06-24  Gautier Portet <kassoulet gmail com>
 	* src/soundconverter.py: Fix track number/count missing when writing to
 	  AAC files.
 

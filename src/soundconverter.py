@@ -2003,7 +2003,7 @@ class PreferencesDialog(GladeWindow, GConfStore):
 		if ret == gtk.RESPONSE_OK:
 			folder = self.target_folder_chooser.get_uri()
 			if folder:
-				self.set_string('selected-folder', folder)
+				self.set_string('selected-folder', urllib.unquote(folder))
 				self.update_selected_folder()
 				self.update_example()
 

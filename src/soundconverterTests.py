@@ -234,8 +234,8 @@ class TargetNameGeneratorTestCases(unittest.TestCase):
         self.g.set_basename_pattern("%(title)s")
         self.failUnlessEqual(self.g.get_target_name(self.s),
                              quote("/music/\xa0\xb0\xc0\xd0/\xa2\xb2\xc2\xd2/\xa1\xb1\xc1\xd1.ogg"))
-                             
-                             
+
+
     def testRoot(self):
         self.s = SoundFile("/path/to/file.flac", "/path/")
         self.s.add_tags({
