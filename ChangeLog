@@ -1,3 +1,9 @@
+2010-11-03  Gautier Portet <gautier soundconverter org>
+	* src/soundconverter.py: Add Folder was broken when using Ogg Vorbis filter
+	 and trying to add .ogg files, since the extension filter contained two 
+	 extension patterns and add_uris supported only one.
+	 (thanks philchand, fixes #17675)
+
 2010-06-24  Gautier Portet <kassoulet gmail com>
 	* src/soundconverter.py: Destination filename was url encoded when stored
 	  in gconf.
