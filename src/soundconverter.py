@@ -2404,7 +2404,7 @@ class CustomFileChooser:
 	"""
 	Custom file chooser.\n
 	"""
-	def __init__(self):
+	def __init__(self, parent):
 		"""
 		Constructor
 		Load glade object, create a combobox
@@ -2412,6 +2412,7 @@ class CustomFileChooser:
 		xml = gtk.glade.XML(GLADE,'custom_file_chooser')
 		self.dlg = xml.get_widget('custom_file_chooser')
 		self.dlg.set_title(_('Open a file'))
+		self.dlg.set_transient_for(parent)
 
 		# setup
 		self.fcw = xml.get_widget('filechooserwidget')
@@ -2497,7 +2498,7 @@ class SoundConverterWindow(GladeWindow):
 		self.prefs = PreferencesDialog(glade)
 		#self.progressfile = glade.get_widget('progressfile')
 
-		self.addchooser = CustomFileChooser()
+		self.addchooser = CustomFileChooser(self.widget)
 		self.addfolderchooser = gtk.FileChooserDialog(_('Add Folder...'),
 			self.widget, gtk.FILE_CHOOSER_ACTION_SELECT_FOLDER,
 			(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, gtk.STOCK_OPEN,	gtk.RESPONSE_OK))
@@ -2714,6 +2715,7 @@ class SoundConverterWindow(GladeWindow):
 		about.set_property('name', NAME)
 		about.set_property('version', VERSION)
 		about.set_property('translator_credits', TRANSLATORS)
+		about.set_transient_for(self.widget)
 		about.show()
 
 	def selection_changed(self, *args):
