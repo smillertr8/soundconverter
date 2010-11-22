@@ -152,7 +152,8 @@ try:
 	import gobject
 	gobject.threads_init()
 	import gnomevfs
-except ImportError:
+except ImportError, e:
+	print 'error: %s' % e
 	print '%s needs gnome-python 2.10!' % NAME
 	sys.exit(1)
 
