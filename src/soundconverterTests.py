@@ -86,7 +86,7 @@ class TargetNameGeneratorTestCases(unittest.TestCase):
         self.s = SoundFile("/path/to/file with spaces")
         self.g.set_replace_messy_chars(False)
         self.g.set_target_suffix(".ogg")
-        self.g.set_folder("/mu sic")
+        self.g.set_folder("/mu%20sic")
         self.failUnlessEqual(self.g.get_target_name(self.s),
                              "/mu%20sic/file%20with%20spaces.ogg")
 

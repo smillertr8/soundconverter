@@ -638,7 +638,7 @@ class TargetNameGenerator:
 		if self.folder is None:
 			folder = root
 		else:
-			folder = urllib.quote(self.folder, '/:')
+			folder = self.folder
 
 		result = os.path.join(folder, basefolder, urllib.quote(result))
 
@@ -1046,15 +1046,14 @@ class Decoder(Pipeline):
 			pass
 
 	def found_tag(self, decoder, something, taglist):
-		#debug('found_tags:', self.sound_file.get_filename_for_display())
-		#debug('\ttitle=%s' % (taglist['title']))
+		debug('found_tags:', self.sound_file.get_filename_for_display())
 		for k in taglist.keys():
-			#debug('\t%s=%s' % (k, taglist[k]))
+			debug('\t%s=%s' % (k, taglist[k]))
 			if isinstance(taglist[k], gst.Date):
 				taglist['year'] = taglist[k].year
 				taglist['date'] = '%04d-%02d-%02d' % (taglist[k].year,
 									taglist[k].month, taglist[k].day)
-
+									
 		tag_whitelist = (
 			'artist',
 			'album',
