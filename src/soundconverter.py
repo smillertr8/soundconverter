@@ -103,7 +103,7 @@ def parse_command_line():
 		help=_('Show tags for input files instead of converting'
 			'them. This indicates \n command line batch mode'
 			'and disables the graphical user interface.'))
-	parser.add_option('-m', '--mime-type', action="store_true", dest="batch_mime",
+	parser.add_option('-m', '--mime-type', action="store", dest="batch_mime",
 		help=_('Set the output MIME type for batch mode. The default'
 			'is %s. Note that you probably want to set the output'
 			'suffix as well.') % settings['cli-output-type'])
@@ -131,6 +131,10 @@ if options.mode:
 	settings['mode'] = options.mode
 if options.jobs:
 	settings['jobs'] = options.jobs
+if options.batch_mime:
+	settings['cli-output-type'] = options.batch_mime
+if options.new_suffix:
+	settings['cli-output-suffix'] = options.new_suffix
 
 
 # we prefer to launch locally present glade file
@@ -636,11 +640,11 @@ class TargetNameGenerator:
 			result = s
 
 		if self.folder is None:
-			folder = root
+			folder = os.path.join(root, basefolder)
 		else:
 			folder = self.folder
 
-		result = os.path.join(folder, basefolder, urllib.quote(result))
+		result = os.path.join(folder, urllib.quote(result))
 
 		return result
 
@@ -772,6 +776,12 @@ class TaskQueue(BackgroundTask):
 			# add a task to a stalled taskqueue, shake it!
 			self.start_next_task()
 
+	def get_current_task(self):
+		if self.running and self.running_tasks:
+			return self.running_tasks[0]
+		else:
+			return None
+
 	def start_next_task(self):
 		to_start = get_option('jobs') - len(self.running_tasks)
 		for i in range(to_start):
@@ -797,7 +807,7 @@ class TaskQueue(BackgroundTask):
 
 	def finished(self):
 		""" BackgroundTask finish callback """
-		log('Queue done in %.3fs (%s tasks)' % (time.time() - self.start_time, self.count))
+		log('\nQueue done in %.3fs (%s tasks)' % (time.time() - self.start_time, self.count))
 		self.queue_ended()
 		self.running = False
 
@@ -1171,6 +1181,7 @@ class Converter(Decoder):
 		self.mp3_bitrate = None
 		self.mp3_mode = None
 		self.mp3_quality = None
+		self.wav_sample_width = 16
 
 		self.output_resample = output_resample
 		self.resample_rate = resample_rate
@@ -2812,12 +2823,11 @@ def cli_tags_main(input_files):
 		if not get_option('quiet'):
 			print input_file.get_uri()
 		t = TagReader(input_file)
-		t.setup()
-		while t.do_work():
-			pass
-		t.finish()
+		t.start()
+		while t.running:
+			gtk_sleep(0.1)
 		if not get_option('quiet'):
-			keys = input_file.keys()
+			keys = input_file.tags.keys()
 			keys.sort()
 			for key in keys:
 				print '		%s: %s' % (key, input_file[key])
@@ -2853,21 +2863,25 @@ def cli_convert_main(input_files):
 	progress = CliProgress()
 
 	queue = TaskQueue()
-	for input_file in input_files:
-		input_file = SoundFile(input_file)
+	for input_name in input_files:
+		input_file = SoundFile(input_name)
 		output_name = generator.get_target_name(input_file)
+		if input_name == output_name:
+			print 'WARNING: Not reconverting', input_name
+			continue
 		c = Converter(input_file, output_name, output_type)
 		c.overwrite = True
 		c.init()
-		queue.add(c)
+		queue.add_task(c)
 
 	previous_filename = None
-	queue.run()
+	queue.start()
 	while queue.running:
 		t = queue.get_current_task()
 		if t and not get_option('quiet'):
 			if previous_filename != t.sound_file.get_filename_for_display():
 				if previous_filename:
+					print
 					print _('%s: OK') % previous_filename
 				previous_filename = t.sound_file.get_filename_for_display()
 

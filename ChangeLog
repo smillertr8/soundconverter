@@ -1,3 +1,10 @@
+2010-11-26  Gautier Portet <gautier soundconverter org>
+	* src/soundconverter.py: Apply patch with many batch mode fixes:
+	  - cli options -t, -m, -s fail or crash
+	  - crash
+	  - stop killing output files in batch mode
+	 (thanks Michael, fixes #17743, #17735, #17502)
+
 2010-11-22  Gautier Portet <gautier soundconverter org>
 	* src/soundconverter.py: Fix destination folder quoting.
 	 (thanks Michael & Elitenoobboy, fixes #17426)
