@@ -1182,6 +1182,7 @@ class Converter(Decoder):
 		self.mp3_mode = None
 		self.mp3_quality = None
 		self.wav_sample_width = 16
+		self.flac_compression = 8
 
 		self.output_resample = output_resample
 		self.resample_rate = resample_rate

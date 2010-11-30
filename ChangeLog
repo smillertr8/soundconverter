@@ -1,3 +1,7 @@
+2010-11-30  Gautier Portet <gautier soundconverter org>
+	* src/soundconverter.py: Apply patch: CLI mode crash when converting to FLAC.
+	 (thanks Michael)
+
 2010-11-26  Gautier Portet <gautier soundconverter org>
 	* src/soundconverter.py: Apply patch with many batch mode fixes:
 	  - cli options -t, -m, -s fail or crash
@@ -27,7 +31,6 @@
 2010-06-24  Gautier Portet <kassoulet gmail com>
 	* src/soundconverter.py: Fix track number/count missing when writing to
 	  AAC files.
-
 	  (thanks Montel and Tim-Philipp, fixes #17291)
 
 2010-06-16  Gautier Portet <kassoulet gmail com>
