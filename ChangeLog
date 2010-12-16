@@ -1,3 +1,8 @@
+2010-12-16  Gautier Portet <gautier soundconverter org>
+	* src/soundconverter.py: Fix unhandled exception when displaying 
+	 notifications.
+	 (thanks Michael, fixes #17797)
+
 2010-11-30  Gautier Portet <gautier soundconverter org>
 	* src/soundconverter.py: Apply patch: CLI mode crash when converting to FLAC.
 	 (thanks Michael)
