@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: soundconverter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-15 20:39+0100\n"
-"PO-Revision-Date: 2009-04-27 13:41+0000\n"
-"Last-Translator: lyyser <logard.1961@gmail.com>\n"
+"POT-Creation-Date: 2011-01-06 20:54+0100\n"
+"PO-Revision-Date: 2010-09-04 09:50+0000\n"
+"Last-Translator: Tarmo Ilves <tarmo.ilves.001@mail.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-06-24 12:28+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Launchpad-Export-Date: 2010-12-27 15:32+0000\n"
+"X-Generator: Launchpad (build 12138)\n"
 
 #: ../data/soundconverter.desktop.in.in.h:1
 msgid "Audio Format Converter"
@@ -31,9 +32,9 @@ msgstr "Heli konverter"
 
 #: ../data/soundconverter.glade.h:1
 msgid ""
-"32 bits\n"
-"16 bits\n"
-"8 bits"
+"8 bits (very low quality)\n"
+"16 bits (default)\n"
+"32 bits"
 msgstr ""
 
 #: ../data/soundconverter.glade.h:4
@@ -46,15 +47,15 @@ msgstr "<b>Vastuse tüüp?</b>"
 
 #: ../data/soundconverter.glade.h:6
 msgid "<b>Where to place results?</b>"
-msgstr ""
+msgstr "<b>Tulemuse asukot?</b>"
 
 #: ../data/soundconverter.glade.h:7
 msgid "<big><b>File exists already</b></big>\n"
-msgstr ""
+msgstr "<big><b>Fail on juba olemas</b></big>\n"
 
 #: ../data/soundconverter.glade.h:9
 msgid "<i>Example filename:</i>"
-msgstr ""
+msgstr "<i>Näidis faili nimi:</i>"
 
 #: ../data/soundconverter.glade.h:10
 msgid "Add _Folder"
@@ -69,8 +70,9 @@ msgid "Choose..."
 msgstr "Vali..."
 
 #: ../data/soundconverter.glade.h:13
+#, fuzzy
 msgid "Compression:"
-msgstr ""
+msgstr "Kompressioon puudub"
 
 #: ../data/soundconverter.glade.h:14
 msgid ""
@@ -78,10 +80,13 @@ msgid ""
 "Average (ABR)\n"
 "Variable (VBR) - Best quality"
 msgstr ""
+"Ühtlane (CBR)\n"
+"keskmine (ABR)\n"
+"Varieeruv (VBR) - Parim kvaliteet"
 
 #: ../data/soundconverter.glade.h:17
 msgid "Create subfolders: "
-msgstr ""
+msgstr "Loo alamkatloogid: "
 
 #: ../data/soundconverter.glade.h:18
 msgid "Delete original file"
@@ -92,61 +97,61 @@ msgid "Error"
 msgstr "Viga"
 
 #: ../data/soundconverter.glade.h:20
-msgid ""
-"Fast\n"
-"Medium\n"
-"Slow"
-msgstr ""
-
-#: ../data/soundconverter.glade.h:23
 msgid "File exists already"
 msgstr "Fail on juba olemas"
 
-#: ../data/soundconverter.glade.h:24
+#: ../data/soundconverter.glade.h:21
 msgid "Filename pattern: "
 msgstr ""
 
-#: ../data/soundconverter.glade.h:25
+#: ../data/soundconverter.glade.h:22
 msgid "Filter "
 msgstr "Filter "
 
-#: ../data/soundconverter.glade.h:26
+#: ../data/soundconverter.glade.h:23
 msgid "Force mono output"
 msgstr ""
 
-#: ../data/soundconverter.glade.h:27
+#: ../data/soundconverter.glade.h:24
 msgid "Format: "
 msgstr "Vorming: "
 
-#: ../data/soundconverter.glade.h:28
+#: ../data/soundconverter.glade.h:25
 msgid "GNOME Sound Conversion"
 msgstr ""
 
-#: ../data/soundconverter.glade.h:29
+#: ../data/soundconverter.glade.h:26
 msgid "Into a specified folder"
+msgstr "Määratud kausta"
+
+#: ../data/soundconverter.glade.h:27
+msgid ""
+"Less (Faster)\n"
+"Default\n"
+"Better (Slower)"
 msgstr ""
 
 #: ../data/soundconverter.glade.h:30
 msgid "MP3 Encoder is not present."
-msgstr ""
+msgstr "Puudub MP3 kodeeria"
 
 #: ../data/soundconverter.glade.h:31
 #, fuzzy
 msgid ""
 "Ogg Vorbis (.ogg)\n"
 "MP3 (.mp3)\n"
-"FLAC Lossless (.flac)\n"
-"MS Wave (.wav)\n"
+"FLAC (.flac)\n"
+"WAV (.wav)\n"
 "AAC (.m4a)"
 msgstr ""
 "Ogg Vorbis (.ogg)\n"
 "MP3  (.mp3)\n"
-"FLAC Lossless (.flac)\n"
+"FLAC Kadudeta (.flac)\n"
 "MS Wave (.wav)"
 
 #: ../data/soundconverter.glade.h:36
 msgid "Preferences"
-msgstr "Seaded"
+msgstr "Eelistused"
 
 #: ../data/soundconverter.glade.h:37
 msgid "Quality:"
@@ -154,15 +159,15 @@ msgstr "Kvaliteet:"
 
 #: ../data/soundconverter.glade.h:38
 msgid "Read how to install"
-msgstr ""
+msgstr "Loe kuidas paigaltada"
 
 #: ../data/soundconverter.glade.h:39
 msgid "Remove all chars except letters, digits and ./_-"
-msgstr ""
+msgstr "Eemalda kõik märgid väljaarvatud tähed, numbrid ja ./_-"
 
 #: ../data/soundconverter.glade.h:40
 msgid "Replace all messy characters"
-msgstr ""
+msgstr "Asenda kõik segased tähed"
 
 #: ../data/soundconverter.glade.h:41
 msgid "Resample"
@@ -170,7 +175,7 @@ msgstr ""
 
 #: ../data/soundconverter.glade.h:42
 msgid "Same folder as the input file"
-msgstr ""
+msgstr "Sama kaust kui sisend failil"
 
 #: ../data/soundconverter.glade.h:43
 msgid "Sample width:"
@@ -178,13 +183,14 @@ msgstr ""
 
 #: ../data/soundconverter.glade.h:44
 msgid "SoundConverter"
-msgstr ""
+msgstr "Heli konverter"
 
 #: ../data/soundconverter.glade.h:45
 msgid "Use .oga extension"
 msgstr ""
 
 #: ../data/soundconverter.glade.h:46
+#, fuzzy
 msgid ""
 "Very Low\n"
 "Low\n"
@@ -193,10 +199,15 @@ msgid ""
 "Very High\n"
 "Insanely High"
 msgstr ""
+"Väga madal\n"
+"Madal\n"
+"Normaalne\n"
+"Kõrge\n"
+"Väga kõrge"
 
 #: ../data/soundconverter.glade.h:52
 msgid "Where to place results?"
-msgstr ""
+msgstr "Kuhu paigutada tulemused?"
 
 #: ../data/soundconverter.glade.h:53
 msgid "_Add File"
@@ -204,7 +215,7 @@ msgstr "_Lisa fail"
 
 #: ../data/soundconverter.glade.h:54
 msgid "_Apply to entire queue"
-msgstr ""
+msgstr "_Rakenda kogu järjekorrale"
 
 #: ../data/soundconverter.glade.h:55
 msgid "_Edit"
@@ -240,50 +251,103 @@ msgstr ""
 "artist - album"
 
 #: ../data/soundconverter.glade.h:63
+#, fuzzy
+msgid "current file"
+msgstr "Ava fail"
+
+#: ../data/soundconverter.glade.h:64
 msgid "dialog1"
 msgstr "dialoog1"
 
-#: ../data/soundconverter.glade.h:64
-msgid "flac"
-msgstr ""
-
 #: ../data/soundconverter.glade.h:65
+msgid "flac"
+msgstr "flac"
+
+#: ../data/soundconverter.glade.h:66
 msgid "mp3"
 msgstr "mp3"
 
-#: ../data/soundconverter.glade.h:66
+#: ../data/soundconverter.glade.h:67
 msgid "ogg"
 msgstr "ogg"
 
-#: ../data/soundconverter.glade.h:67
+#: ../data/soundconverter.glade.h:68
 msgid ""
 "track_number - track_title\n"
 "track_title\n"
 msgstr ""
+"loo_number - loo_nimi\n"
+"loo_nimi\n"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../data/soundconverter.glade.h:71
+#: ../data/soundconverter.glade.h:72
 msgid "translator_credits"
 msgstr ""
+"This is a dummy translation so that the credits are counted as translated.\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Tarmo Ilves https://launchpad.net/~koolobus\n"
+"  lyyser https://launchpad.net/~lyyser"
 
-#: ../data/soundconverter.glade.h:72
+#: ../data/soundconverter.glade.h:73
 msgid "wav"
 msgstr "wav"
 
-#: ../data/soundconverter.glade.h:73
-msgid "~xxx kbps"
+#: ../src/soundconverter.py:98
+msgid ""
+"Convert in batch mode, from command line, without a graphical user\n"
+" interface. You can use this from, say, shell scripts."
+msgstr ""
+
+#: ../src/soundconverter.py:103
+msgid ""
+"Show tags for input files instead of convertingthem. This indicates \n"
+" command line batch modeand disables the graphical user interface."
+msgstr ""
+
+#: ../src/soundconverter.py:107
+#, python-format
+msgid ""
+"Set the output MIME type for batch mode. The defaultis %s. Note that you "
+"probably want to set the outputsuffix as well."
+msgstr ""
+
+#: ../src/soundconverter.py:111
+msgid "Be quiet. Don't write normal output, only errors."
+msgstr ""
+
+#: ../src/soundconverter.py:113
+#, fuzzy
+msgid "Print additional debug information"
+msgstr "Väljasta täiendav tõrkeotsingu info"
+
+#: ../src/soundconverter.py:115
+#, python-format
+msgid ""
+"Set the output filename suffix for batch mode.The default is %s . Note that "
+"the suffix does notaffect\n"
+" the output MIME type."
+msgstr ""
+
+#: ../src/soundconverter.py:119
+msgid "Force number of concurrent conversions."
+msgstr ""
+
+#: ../src/soundconverter.py:121
+msgid "Show GStreamer Options"
 msgstr ""
 
 #. traductors: These are the custom filename patterns. Only if it does make sense.
-#: ../src/soundconverter.py:154
+#: ../src/soundconverter.py:240
+#, fuzzy
 msgid "Artist Album Title Track Total Genre Date Year Timestamp"
-msgstr ""
+msgstr "Esitaja Album Pealkiri Lugu Kokku Žanr Kuupäev Aasta"
 
-#: ../src/soundconverter.py:188
+#: ../src/soundconverter.py:273
 msgid "All files"
 msgstr ""
 
-#: ../src/soundconverter.py:594
+#: ../src/soundconverter.py:674
 #, python-format
 msgid ""
 "\n"
@@ -296,22 +360,24 @@ msgstr ""
 "Tõrge: %s\n"
 "%s\n"
 
-#: ../src/soundconverter.py:820
+#: ../src/soundconverter.py:842
 msgid "Internal error"
 msgstr "Sisemine viga"
 
-#: ../src/soundconverter.py:821
+#: ../src/soundconverter.py:843
 msgid ""
 "Couldn't link GStreamer elements.\n"
 " Please report this as a bug."
 msgstr ""
+"Ei saa linkida GStreameri elemente. \n"
+"Teata et see on  bug"
 
-#: ../src/soundconverter.py:826
+#: ../src/soundconverter.py:848
 #, python-format
 msgid "Unknown type %s"
 msgstr "Tundmatu tüüp %s"
 
-#: ../src/soundconverter.py:827
+#: ../src/soundconverter.py:849
 #, python-format
 msgid ""
 "The file %s is of an unknown type.\n"
@@ -319,228 +385,207 @@ msgid ""
 " for files of this type if it is important\n"
 " to you."
 msgstr ""
+"Faili% s on tundmatu tüüp. \n"
+"Paluge arendajatel lisada \n"
+"tugi selle faili tüübile, \n"
+"kui see on teile tähtis."
 
-#: ../src/soundconverter.py:1133
+#: ../src/soundconverter.py:1165
 msgid "Target exists."
 msgstr "Tegum on juba olemas."
 
-#: ../src/soundconverter.py:1134
+#: ../src/soundconverter.py:1166
 #, python-format
 msgid "The output file %s already exists."
 msgstr "Väljund fail %s On juba olemas."
 
-#: ../src/soundconverter.py:1194
+#: ../src/soundconverter.py:1221
 #, python-format
 msgid "Cannot create a decoder for '%s' format."
-msgstr ""
+msgstr "Ei saa luua kooderit '% s \"formaadis."
 
-#: ../src/soundconverter.py:1209
+#: ../src/soundconverter.py:1236
 #, python-format
 msgid "Cannot create '%s' folder."
 msgstr "Ei suuda luua '%s' kausta."
 
-#: ../src/soundconverter.py:1241
+#: ../src/soundconverter.py:1267
 msgid "GStreamer Error:"
 msgstr ""
 
-#: ../src/soundconverter.py:1385
+#: ../src/soundconverter.py:1418
 #, fuzzy
 msgid "Adding files..."
-msgstr "Lisa kataloog..."
+msgstr "laen sildid..."
 
-#: ../src/soundconverter.py:1450
+#: ../src/soundconverter.py:1477
+msgid "too much files, skipping tag reading."
+msgstr ""
+
+#: ../src/soundconverter.py:1498
+#, fuzzy
+msgid "Reading tags..."
+msgstr "laen sildid..."
+
+#: ../src/soundconverter.py:1516
 msgid "loading tags..."
-msgstr ""
+msgstr "laen sildid..."
 
-#: ../src/soundconverter.py:1452
+#: ../src/soundconverter.py:1518
 msgid "no tags"
-msgstr ""
+msgstr "pole silte"
 
-#: ../src/soundconverter.py:1497
+#: ../src/soundconverter.py:1563
 msgid "unknown"
 msgstr "Tundmatu"
 
-#: ../src/soundconverter.py:1526
+#: ../src/soundconverter.py:1641
 msgid "Same as input, but replacing the suffix"
-msgstr ""
+msgstr "Sama, mis sisend, kuid asendatav järelliides"
 
-#: ../src/soundconverter.py:1527
+#: ../src/soundconverter.py:1642
 msgid "Same as input, but with an additional suffix"
-msgstr ""
+msgstr "Sama, mis sisend, kuid täiendava järelliidedes"
 
-#: ../src/soundconverter.py:1528
+#: ../src/soundconverter.py:1643
 msgid "Track number - title"
-msgstr ""
+msgstr "Lugude arv - pealkiri"
 
-#: ../src/soundconverter.py:1529
+#: ../src/soundconverter.py:1644
 msgid "Track title"
-msgstr ""
+msgstr "Loo pealkiri"
 
-#: ../src/soundconverter.py:1530
+#: ../src/soundconverter.py:1645
 msgid "Artist - title"
-msgstr ""
+msgstr "Esitaja - nimi"
 
-#: ../src/soundconverter.py:1531
+#: ../src/soundconverter.py:1646
 msgid "Custom filename pattern"
-msgstr ""
+msgstr "Kohandatud failinime muster"
 
-#: ../src/soundconverter.py:1535
+#: ../src/soundconverter.py:1650
 msgid "artist/album"
-msgstr ""
+msgstr "esitaja/album"
 
-#: ../src/soundconverter.py:1536
+#: ../src/soundconverter.py:1651
 msgid "artist-album"
-msgstr ""
+msgstr "esitaja album"
 
-#: ../src/soundconverter.py:1537
+#: ../src/soundconverter.py:1652
 msgid "artist - album"
-msgstr ""
+msgstr "esitaja album"
 
-#: ../src/soundconverter.py:1599
+#: ../src/soundconverter.py:1703
 msgid "Available patterns:"
 msgstr ""
 
-#: ../src/soundconverter.py:1742
+#: ../src/soundconverter.py:1853
 #, python-format
 msgid "Into folder %s"
-msgstr ""
+msgstr "info kaust %s"
 
-#: ../src/soundconverter.py:1821
+#: ../src/soundconverter.py:1932
 #, python-format
 msgid "Target bitrate: %s"
-msgstr ""
+msgstr "Sihtmärgi bitikiiruse: %s"
 
-#: ../src/soundconverter.py:2135
+#: ../src/soundconverter.py:2234
 #, fuzzy
 msgid "Conversion Canceled"
 msgstr "Konvertimine katkestatud"
 
-#: ../src/soundconverter.py:2170
+#: ../src/soundconverter.py:2268
 msgid "Cannot overwrite source file(s)!"
 msgstr ""
 
-#: ../src/soundconverter.py:2183
+#: ../src/soundconverter.py:2281
 #, python-format
 msgid ""
 "The output file <i>%s</i>\n"
 " exists already.\n"
 " Do you want to skip the file, overwrite it or cancel the conversion?\n"
 msgstr ""
+"Väljundfail <i>%s</i>\n"
+" on juba olemas.\n"
+" Kas soovite vahele jätta faili, üle kirjutada või katkestada konvertimine?\n"
 
-#: ../src/soundconverter.py:2281
+#: ../src/soundconverter.py:2391
 #, python-format
 msgid "Conversion done, in %s"
-msgstr ""
+msgstr "Konverteerimine lõpetatud ajaga %s"
 
-#: ../src/soundconverter.py:2317
+#: ../src/soundconverter.py:2427
 msgid "Open a file"
 msgstr "Ava fail"
 
-#: ../src/soundconverter.py:2409
+#: ../src/soundconverter.py:2515
 msgid "Add Folder..."
 msgstr "Lisa kataloog..."
 
-#: ../src/soundconverter.py:2547
+#: ../src/soundconverter.py:2656
 #, fuzzy
 msgid "Conversion cancelled"
 msgstr "Konvertimine katkestatud"
 
-#: ../src/soundconverter.py:2570
+#: ../src/soundconverter.py:2679
 msgid "Waiting for tags"
 msgstr ""
 
-#: ../src/soundconverter.py:2577
+#: ../src/soundconverter.py:2686
 msgid "Waiting for tags..."
-msgstr ""
+msgstr "Ootan märgistust..."
 
-#: ../src/soundconverter.py:2585 ../src/soundconverter.py:2598
+#: ../src/soundconverter.py:2694 ../src/soundconverter.py:2707
 msgid "Paused"
 msgstr "Peatatud"
 
-#: ../src/soundconverter.py:2602
+#: ../src/soundconverter.py:2711
 msgid "Canceled"
 msgstr "Katkestatud"
 
-#: ../src/soundconverter.py:2651
+#: ../src/soundconverter.py:2763
 #, python-format
 msgid "Converting file %d of %d  (%s)"
 msgstr "Konverdin faili %d ist %d  (%s)"
 
-#: ../src/soundconverter.py:2664
+#: ../src/soundconverter.py:2776
 msgid "Converting"
 msgstr "Konverdin"
 
-#: ../src/soundconverter.py:2681
+#: ../src/soundconverter.py:2797
 #, python-format
 msgid "%d:%02d left"
 msgstr "%d:%02d jäänud"
 
-#: ../src/soundconverter.py:2686
+#: ../src/soundconverter.py:2802
 msgid "Ready"
 msgstr "Valmis"
 
-#: ../src/soundconverter.py:2767
+#: ../src/soundconverter.py:2887
 #, python-format
 msgid "%s: OK"
 msgstr "%s: OK"
-
-#: ../src/soundconverter.py:2828
-#, python-format
-msgid "Usage: %s [options] [soundfile ...]"
-msgstr ""
-
-#: ../src/soundconverter.py:2843
-msgid "Print out a usage summary."
-msgstr ""
-
-#: ../src/soundconverter.py:2846
-msgid ""
-"Convert in batch mode, from command line, without a graphical user\n"
-" interface. You can use this from, say, shell scripts."
-msgstr ""
-
-#: ../src/soundconverter.py:2849
-#, python-format
-msgid ""
-"Set the output MIME type for batch mode. The default is\n"
-" %s . Note that you probably want to set\n"
-" the output suffix as well."
-msgstr ""
-
-#: ../src/soundconverter.py:2852
-msgid "Be quiet. Don't write normal output, only errors."
-msgstr ""
-
-#: ../src/soundconverter.py:2855
-msgid "Print additional debug information"
-msgstr ""
-
-#: ../src/soundconverter.py:2858
-#, python-format
-msgid ""
-"Set the output filename suffix for batch mode. The default is \n"
-" %s . Note that the suffix does not affect\n"
-" the output MIME type."
-msgstr ""
-
-#: ../src/soundconverter.py:2861
-msgid ""
-"Show tags for input files instead of converting them. This indicates \n"
-" command line batch mode and disables the graphical user interface."
-msgstr ""
-
-#: ../src/soundconverter.py:2864
-msgid "Force number of concurrent conversions."
-msgstr ""
-
-#~ msgid "_Remove"
-#~ msgstr "_Eemalda"
 
 #~ msgid "skipping: '%s'"
 #~ msgstr "vahelejätt: '%s'"
 
 #~ msgid "Creating folder: '%s'"
 #~ msgstr "Loon kasuta: '%s'"
+
+#~ msgid "Cannot set permission on '%s'"
+#~ msgstr "Ei saa määrata loa kohta '%s'"
+
+#~ msgid "file already present: '%s'"
+#~ msgstr "fail on juba kohal: '%s'"
+
+#~ msgid "canceling conversion."
+#~ msgstr "katkesta konvertimine"
+
+#~ msgid "Usage: %s [options] [soundfile ...]"
+#~ msgstr "Kasutus: %s [suvandid] [helifail ...]"
+
+#~ msgid "Print out a usage summary."
+#~ msgstr "Väljasta kasutusinformatsioon"
 
 #~ msgid "FLAC"
 #~ msgstr "FLAC"
@@ -553,3 +598,6 @@ msgstr ""
 
 #~ msgid "WAV"
 #~ msgstr "WAV"
+
+#~ msgid "_Remove"
+#~ msgstr "_Eemalda"

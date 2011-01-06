@@ -7,46 +7,47 @@ msgid ""
 msgstr ""
 "Project-Id-Version: soundconverter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-15 20:39+0100\n"
-"PO-Revision-Date: 2009-05-02 23:12+0000\n"
-"Last-Translator: Jimmy Frydkær Jensen <thewolf40@mailme.dk>\n"
+"POT-Creation-Date: 2011-01-06 20:54+0100\n"
+"PO-Revision-Date: 2010-12-26 17:26+0000\n"
+"Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <da@li.org>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-06-24 12:28+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Launchpad-Export-Date: 2010-12-27 15:32+0000\n"
+"X-Generator: Launchpad (build 12138)\n"
 
 #: ../data/soundconverter.desktop.in.in.h:1
 msgid "Audio Format Converter"
-msgstr "Lyd-format converter"
+msgstr "Lydformat-konvertering"
 
 #: ../data/soundconverter.desktop.in.in.h:2
 msgid "Convert audio files into other formats"
-msgstr "Konverter lydfiler til andre formater"
+msgstr "Konvertér lydfiler til andre formater"
 
 #: ../data/soundconverter.desktop.in.in.h:3
 msgid "Sound Converter"
-msgstr "Lyd-konverter"
+msgstr "Lydkonvertering"
 
 #: ../data/soundconverter.glade.h:1
 msgid ""
-"32 bits\n"
-"16 bits\n"
-"8 bits"
+"8 bits (very low quality)\n"
+"16 bits (default)\n"
+"32 bits"
 msgstr ""
 
 #: ../data/soundconverter.glade.h:4
 msgid "<b>How to name files?</b>"
-msgstr "<b>Hvordan filer navngives?</b>"
+msgstr "<b>Hvordan skal filer navngives?</b>"
 
 #: ../data/soundconverter.glade.h:5
 msgid "<b>Type of result?</b>"
-msgstr "<b>Type resultat?</b>"
+msgstr "<b>Resultattype?</b>"
 
 #: ../data/soundconverter.glade.h:6
 msgid "<b>Where to place results?</b>"
-msgstr "<b>Hvor skal resultateerne placeres?</b>"
+msgstr "<b>Hvor skal resultaterne placeres?</b>"
 
 #: ../data/soundconverter.glade.h:7
 msgid "<big><b>File exists already</b></big>\n"
@@ -58,11 +59,11 @@ msgstr "<i>Filnavn-eksempel:</i>"
 
 #: ../data/soundconverter.glade.h:10
 msgid "Add _Folder"
-msgstr "Tilføj_Mappe"
+msgstr "Tilføj _mappe"
 
 #: ../data/soundconverter.glade.h:11
 msgid "Bitrate mode:"
-msgstr "Bitrate tilstand:"
+msgstr "Bitratetilstand:"
 
 #: ../data/soundconverter.glade.h:12
 msgid "Choose..."
@@ -71,7 +72,7 @@ msgstr "Vælg..."
 #: ../data/soundconverter.glade.h:13
 #, fuzzy
 msgid "Compression:"
-msgstr "Ingen komprimmering"
+msgstr "Ingen komprimering"
 
 #: ../data/soundconverter.glade.h:14
 msgid ""
@@ -89,63 +90,63 @@ msgstr "Opret undermapper: "
 
 #: ../data/soundconverter.glade.h:18
 msgid "Delete original file"
-msgstr "Slet originale fil"
+msgstr "Slet oprindelig fil"
 
 #: ../data/soundconverter.glade.h:19
 msgid "Error"
 msgstr "Fejl"
 
 #: ../data/soundconverter.glade.h:20
-msgid ""
-"Fast\n"
-"Medium\n"
-"Slow"
-msgstr ""
-
-#: ../data/soundconverter.glade.h:23
 msgid "File exists already"
-msgstr "Fil eksisterer allerede"
+msgstr "Fil findes allerede"
 
-#: ../data/soundconverter.glade.h:24
+#: ../data/soundconverter.glade.h:21
 msgid "Filename pattern: "
-msgstr "Filnavn-mønster: "
+msgstr "Filnavnsmønster: "
 
-#: ../data/soundconverter.glade.h:25
+#: ../data/soundconverter.glade.h:22
 msgid "Filter "
 msgstr "Filter "
 
-#: ../data/soundconverter.glade.h:26
+#: ../data/soundconverter.glade.h:23
 msgid "Force mono output"
 msgstr ""
 
-#: ../data/soundconverter.glade.h:27
+#: ../data/soundconverter.glade.h:24
 msgid "Format: "
 msgstr "Format: "
 
-#: ../data/soundconverter.glade.h:28
+#: ../data/soundconverter.glade.h:25
 msgid "GNOME Sound Conversion"
 msgstr "GNOME Lyd-konvertering"
 
-#: ../data/soundconverter.glade.h:29
+#: ../data/soundconverter.glade.h:26
 msgid "Into a specified folder"
 msgstr "I en specificeret mappe"
 
+#: ../data/soundconverter.glade.h:27
+msgid ""
+"Less (Faster)\n"
+"Default\n"
+"Better (Slower)"
+msgstr ""
+
 #: ../data/soundconverter.glade.h:30
 msgid "MP3 Encoder is not present."
-msgstr "MP3 indkoder er ikke til stede."
+msgstr "MP3-indkoder er ikke til stede."
 
 #: ../data/soundconverter.glade.h:31
 #, fuzzy
 msgid ""
 "Ogg Vorbis (.ogg)\n"
 "MP3 (.mp3)\n"
-"FLAC Lossless (.flac)\n"
-"MS Wave (.wav)\n"
+"FLAC (.flac)\n"
+"WAV (.wav)\n"
 "AAC (.m4a)"
 msgstr ""
 "Ogg Vorbis (.ogg)\n"
 "MP3  (.mp3)\n"
-"FLAC Lossless (.flac)\n"
+"FLAC tabsfri (.flac)\n"
 "MS Wave (.wav)"
 
 #: ../data/soundconverter.glade.h:36
@@ -162,11 +163,11 @@ msgstr "Læs hvordan du installerer"
 
 #: ../data/soundconverter.glade.h:39
 msgid "Remove all chars except letters, digits and ./_-"
-msgstr "Fjern alle chars undtaget bogstaver, digits og ./_-"
+msgstr "Fjern alle tegn undtagen bogstaver, tal og ./_-"
 
 #: ../data/soundconverter.glade.h:40
 msgid "Replace all messy characters"
-msgstr "Udskift alle rodede tagn"
+msgstr "Udskift alle problematiske tegn"
 
 #: ../data/soundconverter.glade.h:41
 msgid "Resample"
@@ -206,7 +207,7 @@ msgstr ""
 
 #: ../data/soundconverter.glade.h:52
 msgid "Where to place results?"
-msgstr "Hvor skal resultater placeres?"
+msgstr "Hvor skal resultaterne placeres?"
 
 #: ../data/soundconverter.glade.h:53
 msgid "_Add File"
@@ -214,7 +215,7 @@ msgstr "_Tilføj fil"
 
 #: ../data/soundconverter.glade.h:54
 msgid "_Apply to entire queue"
-msgstr "_Tilføj til ehel køen"
+msgstr "_Tilføj til hele køen"
 
 #: ../data/soundconverter.glade.h:55
 msgid "_Edit"
@@ -250,22 +251,27 @@ msgstr ""
 "kunstner - album"
 
 #: ../data/soundconverter.glade.h:63
+#, fuzzy
+msgid "current file"
+msgstr "Åbn en fil"
+
+#: ../data/soundconverter.glade.h:64
 msgid "dialog1"
 msgstr "dialog1"
 
-#: ../data/soundconverter.glade.h:64
+#: ../data/soundconverter.glade.h:65
 msgid "flac"
 msgstr "flac"
 
-#: ../data/soundconverter.glade.h:65
+#: ../data/soundconverter.glade.h:66
 msgid "mp3"
 msgstr "mp3"
 
-#: ../data/soundconverter.glade.h:66
+#: ../data/soundconverter.glade.h:67
 msgid "ogg"
 msgstr "ogg"
 
-#: ../data/soundconverter.glade.h:67
+#: ../data/soundconverter.glade.h:68
 msgid ""
 "track_number - track_title\n"
 "track_title\n"
@@ -274,29 +280,90 @@ msgstr ""
 "spor_titel\n"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../data/soundconverter.glade.h:71
+#: ../data/soundconverter.glade.h:72
 msgid "translator_credits"
 msgstr ""
+"This is a dummy translation so that the credits are counted as translated.\n"
+"\n"
+"Launchpad Contributions:\n"
+"  AJenbo https://launchpad.net/~ajenbo\n"
+"  Ask Hjorth Larsen https://launchpad.net/~askhl\n"
+"  Jens E. Jensen https://launchpad.net/~jens-e-jensen\n"
+"  Jimmy Frydkær Dürr https://launchpad.net/~jimmy-frydkaer\n"
+"  Mads Lundby https://launchpad.net/~lundbymads-gmail\n"
+"  Schleiss https://launchpad.net/~schleiss\n"
+"  TLE https://launchpad.net/~k-nielsen81"
 
-#: ../data/soundconverter.glade.h:72
+#: ../data/soundconverter.glade.h:73
 msgid "wav"
 msgstr "wav"
 
-#: ../data/soundconverter.glade.h:73
-msgid "~xxx kbps"
+#: ../src/soundconverter.py:98
+msgid ""
+"Convert in batch mode, from command line, without a graphical user\n"
+" interface. You can use this from, say, shell scripts."
+msgstr ""
+"Konverter i batch-tilstand, fra kommandolinje, uden en grafisk bruger-\n"
+" flade. Du kan bruge dette fra f.eks. skalscripts."
+
+#: ../src/soundconverter.py:103
+#, fuzzy
+msgid ""
+"Show tags for input files instead of convertingthem. This indicates \n"
+" command line batch modeand disables the graphical user interface."
+msgstr ""
+"Vis mærker for inddatafiler i stedet for at konvertere dem. Dette angiver \n"
+" kommandolinje-batchtilstand og deaktiverer den grafiske brugerflade."
+
+#: ../src/soundconverter.py:107
+#, fuzzy, python-format
+msgid ""
+"Set the output MIME type for batch mode. The defaultis %s. Note that you "
+"probably want to set the outputsuffix as well."
+msgstr ""
+"Sæt uddata-MIME-type for batch-tilstand. Standard er\n"
+" %s . Vær opmærksom på at du formentlig også ønsker at\n"
+" indstille filtype-endelsen."
+
+#: ../src/soundconverter.py:111
+msgid "Be quiet. Don't write normal output, only errors."
+msgstr "Vær stille. Skriv ikke normal uddata, kun fejl."
+
+#: ../src/soundconverter.py:113
+#, fuzzy
+msgid "Print additional debug information"
+msgstr "Udskriv yderligere fejlsøgnings-information"
+
+#: ../src/soundconverter.py:115
+#, fuzzy, python-format
+msgid ""
+"Set the output filename suffix for batch mode.The default is %s . Note that "
+"the suffix does notaffect\n"
+" the output MIME type."
+msgstr ""
+"Indstil filtype-endelse for uddata i batch-tilstand. Standard er \n"
+" %s . Vær opmærksom på at filtype-endelse ikke berører\n"
+" MIME-typen for uddata."
+
+#: ../src/soundconverter.py:119
+msgid "Force number of concurrent conversions."
+msgstr ""
+
+#: ../src/soundconverter.py:121
+msgid "Show GStreamer Options"
 msgstr ""
 
 #. traductors: These are the custom filename patterns. Only if it does make sense.
-#: ../src/soundconverter.py:154
+#: ../src/soundconverter.py:240
 #, fuzzy
 msgid "Artist Album Title Track Total Genre Date Year Timestamp"
 msgstr "Kunstner Album Titel Spor Total Genre Dato År"
 
-#: ../src/soundconverter.py:188
+#: ../src/soundconverter.py:273
 msgid "All files"
 msgstr ""
 
-#: ../src/soundconverter.py:594
+#: ../src/soundconverter.py:674
 #, python-format
 msgid ""
 "\n"
@@ -309,24 +376,24 @@ msgstr ""
 "Fejl: %s\n"
 "%s\n"
 
-#: ../src/soundconverter.py:820
+#: ../src/soundconverter.py:842
 msgid "Internal error"
 msgstr "Intern fejl"
 
-#: ../src/soundconverter.py:821
+#: ../src/soundconverter.py:843
 msgid ""
 "Couldn't link GStreamer elements.\n"
 " Please report this as a bug."
 msgstr ""
-"Kunne ikke linke GStreamer elementer.\n"
-" Rapporter venligst dette som en fejl."
+"Kunne ikke linke GStreamer-elementer.\n"
+"Rapportér venligst dette som en fejl."
 
-#: ../src/soundconverter.py:826
+#: ../src/soundconverter.py:848
 #, python-format
 msgid "Unknown type %s"
 msgstr "Ukendt type %s"
 
-#: ../src/soundconverter.py:827
+#: ../src/soundconverter.py:849
 #, python-format
 msgid ""
 "The file %s is of an unknown type.\n"
@@ -335,275 +402,229 @@ msgid ""
 " to you."
 msgstr ""
 "Filen %s er af ukendt type.\n"
-" Spørg venligst udviklerne om mere understøttelse\n"
-" for filer af denne type hvis det er vigtigt\n"
+" Bed udviklerne om at tilføje understøttelse\n"
+" for filer af denne type, hvis det er vigtigt\n"
 " for dig."
 
-#: ../src/soundconverter.py:1133
+#: ../src/soundconverter.py:1165
 msgid "Target exists."
-msgstr "Målet eksistere."
+msgstr "Målet eksisterer."
 
-#: ../src/soundconverter.py:1134
+#: ../src/soundconverter.py:1166
 #, python-format
 msgid "The output file %s already exists."
-msgstr "Uddatafilen%s eksisterer allerede."
+msgstr "Uddatafilen %s eksisterer allerede."
 
-#: ../src/soundconverter.py:1194
+#: ../src/soundconverter.py:1221
 #, python-format
 msgid "Cannot create a decoder for '%s' format."
-msgstr "Kan ikke oprette en dekoder for '%s' format."
+msgstr "Kan ikke oprette en dekoder for \"%s\"-formatet."
 
-#: ../src/soundconverter.py:1209
+#: ../src/soundconverter.py:1236
 #, python-format
 msgid "Cannot create '%s' folder."
-msgstr "Kan ikke oprette mappe '%s'."
+msgstr "Kan ikke oprette mappe \"%s\"."
 
-#: ../src/soundconverter.py:1241
+#: ../src/soundconverter.py:1267
 msgid "GStreamer Error:"
 msgstr ""
 
-#: ../src/soundconverter.py:1385
+#: ../src/soundconverter.py:1418
 #, fuzzy
 msgid "Adding files..."
-msgstr "Tilføj mappe"
+msgstr "indlæser mærker..."
 
-#: ../src/soundconverter.py:1450
+#: ../src/soundconverter.py:1477
+msgid "too much files, skipping tag reading."
+msgstr ""
+
+#: ../src/soundconverter.py:1498
+#, fuzzy
+msgid "Reading tags..."
+msgstr "indlæser mærker..."
+
+#: ../src/soundconverter.py:1516
 msgid "loading tags..."
 msgstr "indlæser mærker..."
 
-#: ../src/soundconverter.py:1452
+#: ../src/soundconverter.py:1518
 msgid "no tags"
 msgstr "ingen mærker"
 
-#: ../src/soundconverter.py:1497
+#: ../src/soundconverter.py:1563
 msgid "unknown"
 msgstr "ukendt"
 
-#: ../src/soundconverter.py:1526
+#: ../src/soundconverter.py:1641
 msgid "Same as input, but replacing the suffix"
-msgstr "Samme som inddata, men udskrifer endetillæg"
+msgstr "Samme som inddata, men udskifter filtype-endelse"
 
-#: ../src/soundconverter.py:1527
+#: ../src/soundconverter.py:1642
 msgid "Same as input, but with an additional suffix"
-msgstr "Samme som inddata, men med et ekstra endetillæg"
+msgstr "Samme som inddata, men med en ekstra filtype-endelse"
 
-#: ../src/soundconverter.py:1528
+#: ../src/soundconverter.py:1643
 msgid "Track number - title"
-msgstr "Spor nummer - titel"
+msgstr "Spornummer - titel"
 
-#: ../src/soundconverter.py:1529
+#: ../src/soundconverter.py:1644
 msgid "Track title"
 msgstr "Spor-titel"
 
-#: ../src/soundconverter.py:1530
+#: ../src/soundconverter.py:1645
 msgid "Artist - title"
 msgstr "Kunstner - titel"
 
-#: ../src/soundconverter.py:1531
+#: ../src/soundconverter.py:1646
 msgid "Custom filename pattern"
-msgstr "Sædvanlig filnavn-møsnter"
+msgstr "Tilpasset filnavn-mønster"
 
-#: ../src/soundconverter.py:1535
+#: ../src/soundconverter.py:1650
 msgid "artist/album"
 msgstr "kunstner/album"
 
-#: ../src/soundconverter.py:1536
+#: ../src/soundconverter.py:1651
 msgid "artist-album"
-msgstr "kunstner-albul"
+msgstr "kunstner-album"
 
-#: ../src/soundconverter.py:1537
+#: ../src/soundconverter.py:1652
 msgid "artist - album"
 msgstr "kunstner - album"
 
-#: ../src/soundconverter.py:1599
+#: ../src/soundconverter.py:1703
 #, fuzzy
 msgid "Available patterns:"
-msgstr "Filnavn-mønster: "
+msgstr "Filnavnsmønster: "
 
-#: ../src/soundconverter.py:1742
+#: ../src/soundconverter.py:1853
 #, python-format
 msgid "Into folder %s"
-msgstr "til mappe %s"
+msgstr "I mappen %s"
 
-#: ../src/soundconverter.py:1821
+#: ../src/soundconverter.py:1932
 #, python-format
 msgid "Target bitrate: %s"
 msgstr "Mål-bitrate: %s"
 
-#: ../src/soundconverter.py:2135
+#: ../src/soundconverter.py:2234
 #, fuzzy
 msgid "Conversion Canceled"
-msgstr "Convertering annuleret"
+msgstr "Konvertering annulleret"
 
-#: ../src/soundconverter.py:2170
+#: ../src/soundconverter.py:2268
 msgid "Cannot overwrite source file(s)!"
 msgstr ""
 
-#: ../src/soundconverter.py:2183
+#: ../src/soundconverter.py:2281
 #, python-format
 msgid ""
 "The output file <i>%s</i>\n"
 " exists already.\n"
 " Do you want to skip the file, overwrite it or cancel the conversion?\n"
 msgstr ""
-"Uddatafilen <i>%s</i>\n"
-" eksisterer allerede.\n"
-" ønsker du at springe filen over, overskrive den eller annullere "
+"Outputfilen <i>%s</i>\n"
+" findes allerede.\n"
+" Ønsker du at springe filen over, overskrive den eller annullere "
 "konverteringen?\n"
 
-#: ../src/soundconverter.py:2281
+#: ../src/soundconverter.py:2391
 #, python-format
 msgid "Conversion done, in %s"
-msgstr "Konvertering færdig, på %s"
+msgstr "Konvertering færdig på %s"
 
-#: ../src/soundconverter.py:2317
+#: ../src/soundconverter.py:2427
 msgid "Open a file"
 msgstr "Åbn en fil"
 
-#: ../src/soundconverter.py:2409
+#: ../src/soundconverter.py:2515
 msgid "Add Folder..."
-msgstr "Tilføj mappe"
+msgstr "Tilføj mappe..."
 
-#: ../src/soundconverter.py:2547
+#: ../src/soundconverter.py:2656
 #, fuzzy
 msgid "Conversion cancelled"
-msgstr "Convertering annuleret"
+msgstr "Konvertering annulleret"
 
-#: ../src/soundconverter.py:2570
+#: ../src/soundconverter.py:2679
 msgid "Waiting for tags"
 msgstr "Venter på mærker"
 
-#: ../src/soundconverter.py:2577
+#: ../src/soundconverter.py:2686
 msgid "Waiting for tags..."
 msgstr "Venter på mærker..."
 
-#: ../src/soundconverter.py:2585 ../src/soundconverter.py:2598
+#: ../src/soundconverter.py:2694 ../src/soundconverter.py:2707
 msgid "Paused"
-msgstr "Pauset"
+msgstr "Pause"
 
-#: ../src/soundconverter.py:2602
+#: ../src/soundconverter.py:2711
 msgid "Canceled"
 msgstr "Annulleret"
 
-#: ../src/soundconverter.py:2651
+#: ../src/soundconverter.py:2763
 #, python-format
 msgid "Converting file %d of %d  (%s)"
 msgstr "Konverterer fil %d af %d (%s)"
 
-#: ../src/soundconverter.py:2664
+#: ../src/soundconverter.py:2776
 msgid "Converting"
 msgstr "Konverterer"
 
-#: ../src/soundconverter.py:2681
+#: ../src/soundconverter.py:2797
 #, python-format
 msgid "%d:%02d left"
-msgstr "%d:%02d venstre"
+msgstr "%d:%02d tilbage"
 
-#: ../src/soundconverter.py:2686
+#: ../src/soundconverter.py:2802
 msgid "Ready"
 msgstr "Klar"
 
-#: ../src/soundconverter.py:2767
+#: ../src/soundconverter.py:2887
 #, python-format
 msgid "%s: OK"
 msgstr "%s: OK"
 
-#: ../src/soundconverter.py:2828
-#, python-format
-msgid "Usage: %s [options] [soundfile ...]"
-msgstr "Brug: %s [tilvalg] [lydfil...]"
-
-#: ../src/soundconverter.py:2843
-msgid "Print out a usage summary."
-msgstr "Udskriv et brugs-sammendrag."
-
-#: ../src/soundconverter.py:2846
-msgid ""
-"Convert in batch mode, from command line, without a graphical user\n"
-" interface. You can use this from, say, shell scripts."
-msgstr ""
-"Konverter i batch tilstand, fra kommandolinje, uden en grafisk bruger-\n"
-" flade. Du kan beuge dette fra, lad os sige, shell scripts."
-
-#: ../src/soundconverter.py:2849
-#, python-format
-msgid ""
-"Set the output MIME type for batch mode. The default is\n"
-" %s . Note that you probably want to set\n"
-" the output suffix as well."
-msgstr ""
-"Sæt uddata MIME type for batch tilstand. Standard er\n"
-" %s . Vær opmærksom på at du formentlig ønsker at sætte\n"
-" uddata- endetillæg tillige."
-
-#: ../src/soundconverter.py:2852
-msgid "Be quiet. Don't write normal output, only errors."
-msgstr "Vær stille. Skriv ikke normal uddata, kun fejl."
-
-#: ../src/soundconverter.py:2855
-#, fuzzy
-msgid "Print additional debug information"
-msgstr "Udskriv yderligere fejlsøgnings-information"
-
-#: ../src/soundconverter.py:2858
-#, python-format
-msgid ""
-"Set the output filename suffix for batch mode. The default is \n"
-" %s . Note that the suffix does not affect\n"
-" the output MIME type."
-msgstr ""
-"Sæt uddata filnavn-endetillæg for batch tilstand. Standard er \n"
-" %s . Vær opmærksom på at endetillæg ikke berører\n"
-" uddata MIME typen."
-
-#: ../src/soundconverter.py:2861
-msgid ""
-"Show tags for input files instead of converting them. This indicates \n"
-" command line batch mode and disables the graphical user interface."
-msgstr ""
-"Vis mærker for inddatafiler i stedet for at konvertere dem. Dette "
-"indikerer \n"
-" kommandolinje batch tilstand og deaktiverer den grafiske brugerflade."
-
-#: ../src/soundconverter.py:2864
-msgid "Force number of concurrent conversions."
-msgstr ""
-
-#~ msgid "_Remove"
-#~ msgstr "_Fjern"
-
 #~ msgid "skipping: '%s'"
-#~ msgstr "Springer over: '%s'"
+#~ msgstr "springer over: \"%s\""
 
 #~ msgid "Creating folder: '%s'"
-#~ msgstr "Opretter mappe: '%s'"
+#~ msgstr "Opretter mappe: \"%s\""
 
 #~ msgid "Cannot set permission on '%s'"
-#~ msgstr "Kan ikke sætte tilladelse på '%s'"
+#~ msgstr "Kan ikke indstille tilladelse på \"%s\""
 
 #~ msgid "file already present: '%s'"
-#~ msgstr "Fil allerede til stede: '%s'"
+#~ msgstr "Fil findes allerede: \"%s\""
 
 #~ msgid "canceling conversion."
-#~ msgstr "Annullerer konvertering."
+#~ msgstr "annullerer konvertering."
+
+#~ msgid "Usage: %s [options] [soundfile ...]"
+#~ msgstr "Brug: %s [tilvalg] [lydfil...]"
+
+#~ msgid "Print out a usage summary."
+#~ msgstr "Udskriv et brugs-sammendrag."
 
 #~ msgid "FLAC"
 #~ msgstr "FLAC"
 
 #~ msgid "Free Lossless compression"
-#~ msgstr "Free Lossless komprommering"
+#~ msgstr "Fri tabsfri komprimering"
 
 #~ msgid "Free Lossy Compression"
-#~ msgstr "Free Lossy komprommering"
+#~ msgstr "Fri komprimering med tab"
 
 #~ msgid "MP3"
 #~ msgstr "MP3"
 
 #~ msgid "Non-Free Lossy Compression"
-#~ msgstr "Non-Free Lossy komprimmering"
+#~ msgstr "Ufri komprimering med tab"
 
 #~ msgid "Ogg Vorbis"
 #~ msgstr "Ogg Vorbis"
 
 #~ msgid "WAV"
 #~ msgstr "WAV"
+
+#~ msgid "_Remove"
+#~ msgstr "_Fjern"

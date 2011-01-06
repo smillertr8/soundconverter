@@ -268,15 +268,13 @@ tag_blacklist = (
 	'audio/x-wav',
 )
 
-
 # Name and pattern for CustomFileChooser
 filepattern = (
 	(_('All files'),'*.*'),
 	('MP3','*.mp3'),
 	('Ogg Vorbis','*.ogg;*.oga'),
-	('iTunes AAC ','*.m4a'),
-	('Windows WAV','*.wav'),
-	('AAC','*.aac'),
+	('AAC','*.m4a;*.aac'),
+	('WAV','*.wav'),
 	('FLAC','*.flac'),
 	('AC3','*.ac3')
 )

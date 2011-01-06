@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: soundconverter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-15 20:39+0100\n"
-"PO-Revision-Date: 2007-12-15 07:17+0000\n"
-"Last-Translator: TaoFei <Unknown>\n"
+"POT-Creation-Date: 2011-01-06 20:54+0100\n"
+"PO-Revision-Date: 2009-11-13 22:08+0000\n"
+"Last-Translator: Anthony <Unknown>\n"
 "Language-Team: Simplified Chinese <zh_CN@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-11-05 20:56+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Launchpad-Export-Date: 2010-12-27 15:32+0000\n"
+"X-Generator: Launchpad (build 12138)\n"
 
 #: ../data/soundconverter.desktop.in.in.h:1
 msgid "Audio Format Converter"
@@ -23,7 +24,7 @@ msgstr "音频格式转换程序"
 
 #: ../data/soundconverter.desktop.in.in.h:2
 msgid "Convert audio files into other formats"
-msgstr "把音频文件转换为其它格式"
+msgstr "将音频文件转换为其它格式"
 
 #: ../data/soundconverter.desktop.in.in.h:3
 msgid "Sound Converter"
@@ -31,18 +32,18 @@ msgstr "声音转换程序"
 
 #: ../data/soundconverter.glade.h:1
 msgid ""
-"32 bits\n"
-"16 bits\n"
-"8 bits"
+"8 bits (very low quality)\n"
+"16 bits (default)\n"
+"32 bits"
 msgstr ""
 
 #: ../data/soundconverter.glade.h:4
 msgid "<b>How to name files?</b>"
-msgstr ""
+msgstr "<b>如何命名文件？</b>"
 
 #: ../data/soundconverter.glade.h:5
 msgid "<b>Type of result?</b>"
-msgstr ""
+msgstr "<b>结果类型？</b>"
 
 #: ../data/soundconverter.glade.h:6
 msgid "<b>Where to place results?</b>"
@@ -50,27 +51,28 @@ msgstr ""
 
 #: ../data/soundconverter.glade.h:7
 msgid "<big><b>File exists already</b></big>\n"
-msgstr ""
+msgstr "<big><b>文件已存在</b></big>\n"
 
 #: ../data/soundconverter.glade.h:9
 msgid "<i>Example filename:</i>"
-msgstr ""
+msgstr "<i>样例文件名：</i>"
 
 #: ../data/soundconverter.glade.h:10
 msgid "Add _Folder"
-msgstr ""
+msgstr "添加文件夹(_F)"
 
 #: ../data/soundconverter.glade.h:11
 msgid "Bitrate mode:"
-msgstr ""
+msgstr "比特模式："
 
 #: ../data/soundconverter.glade.h:12
 msgid "Choose..."
-msgstr ""
+msgstr "选择..."
 
 #: ../data/soundconverter.glade.h:13
+#, fuzzy
 msgid "Compression:"
-msgstr ""
+msgstr "无压缩"
 
 #: ../data/soundconverter.glade.h:14
 msgid ""
@@ -78,78 +80,86 @@ msgid ""
 "Average (ABR)\n"
 "Variable (VBR) - Best quality"
 msgstr ""
+"固定比特率 (CBR)\n"
+"平均比特率 (ABR)\n"
+"可变比特率 (VBR) - 最佳质量"
 
 #: ../data/soundconverter.glade.h:17
 msgid "Create subfolders: "
-msgstr ""
+msgstr "创建子文件夹： "
 
 #: ../data/soundconverter.glade.h:18
 msgid "Delete original file"
-msgstr ""
+msgstr "删除源文件"
 
 #: ../data/soundconverter.glade.h:19
 msgid "Error"
-msgstr ""
+msgstr "错误"
 
 #: ../data/soundconverter.glade.h:20
-msgid ""
-"Fast\n"
-"Medium\n"
-"Slow"
-msgstr ""
-
-#: ../data/soundconverter.glade.h:23
 msgid "File exists already"
-msgstr ""
+msgstr "文件已存在"
 
-#: ../data/soundconverter.glade.h:24
+#: ../data/soundconverter.glade.h:21
 msgid "Filename pattern: "
 msgstr ""
 
-#: ../data/soundconverter.glade.h:25
+#: ../data/soundconverter.glade.h:22
 msgid "Filter "
-msgstr ""
+msgstr "过滤器 "
 
-#: ../data/soundconverter.glade.h:26
+#: ../data/soundconverter.glade.h:23
 msgid "Force mono output"
 msgstr ""
 
-#: ../data/soundconverter.glade.h:27
+#: ../data/soundconverter.glade.h:24
 msgid "Format: "
-msgstr ""
+msgstr "格式： "
 
-#: ../data/soundconverter.glade.h:28
+#: ../data/soundconverter.glade.h:25
 msgid "GNOME Sound Conversion"
+msgstr "GNOME 音频转换程序"
+
+#: ../data/soundconverter.glade.h:26
+msgid "Into a specified folder"
 msgstr ""
 
-#: ../data/soundconverter.glade.h:29
-msgid "Into a specified folder"
+#: ../data/soundconverter.glade.h:27
+msgid ""
+"Less (Faster)\n"
+"Default\n"
+"Better (Slower)"
 msgstr ""
 
 #: ../data/soundconverter.glade.h:30
 msgid "MP3 Encoder is not present."
-msgstr ""
+msgstr "未安装 MP3 编码器。"
 
 #: ../data/soundconverter.glade.h:31
+#, fuzzy
 msgid ""
 "Ogg Vorbis (.ogg)\n"
 "MP3 (.mp3)\n"
-"FLAC Lossless (.flac)\n"
-"MS Wave (.wav)\n"
+"FLAC (.flac)\n"
+"WAV (.wav)\n"
 "AAC (.m4a)"
 msgstr ""
+"Ogg Vorbis (.ogg)\n"
+"MP3 (.mp3)\n"
+"FLAC Lossless (.flac)\n"
+"MS Wave (.wav)"
 
 #: ../data/soundconverter.glade.h:36
 msgid "Preferences"
-msgstr ""
+msgstr "首选项"
 
 #: ../data/soundconverter.glade.h:37
 msgid "Quality:"
-msgstr ""
+msgstr "品质："
 
 #: ../data/soundconverter.glade.h:38
 msgid "Read how to install"
-msgstr ""
+msgstr "阅读如何安装"
 
 #: ../data/soundconverter.glade.h:39
 msgid "Remove all chars except letters, digits and ./_-"
@@ -165,7 +175,7 @@ msgstr ""
 
 #: ../data/soundconverter.glade.h:42
 msgid "Same folder as the input file"
-msgstr ""
+msgstr "和输入文件相同"
 
 #: ../data/soundconverter.glade.h:43
 msgid "Sample width:"
@@ -173,13 +183,14 @@ msgstr ""
 
 #: ../data/soundconverter.glade.h:44
 msgid "SoundConverter"
-msgstr ""
+msgstr "音频转换程序"
 
 #: ../data/soundconverter.glade.h:45
 msgid "Use .oga extension"
 msgstr ""
 
 #: ../data/soundconverter.glade.h:46
+#, fuzzy
 msgid ""
 "Very Low\n"
 "Low\n"
@@ -188,6 +199,11 @@ msgid ""
 "Very High\n"
 "Insanely High"
 msgstr ""
+"非常低\n"
+"低\n"
+"一般\n"
+"高\n"
+"非常高"
 
 #: ../data/soundconverter.glade.h:52
 msgid "Where to place results?"
@@ -195,19 +211,20 @@ msgstr ""
 
 #: ../data/soundconverter.glade.h:53
 msgid "_Add File"
-msgstr ""
+msgstr "添加文件(_A)"
 
 #: ../data/soundconverter.glade.h:54
 msgid "_Apply to entire queue"
-msgstr ""
+msgstr "应用到整个队列(_A)"
 
 #: ../data/soundconverter.glade.h:55
 msgid "_Edit"
 msgstr ""
 
 #: ../data/soundconverter.glade.h:56
+#, fuzzy
 msgid "_File"
-msgstr ""
+msgstr "添加文件(_A)"
 
 #: ../data/soundconverter.glade.h:57
 msgid "_Help"
@@ -215,11 +232,11 @@ msgstr ""
 
 #: ../data/soundconverter.glade.h:58
 msgid "_Overwrite"
-msgstr ""
+msgstr "覆盖(_O)"
 
 #: ../data/soundconverter.glade.h:59
 msgid "_Skip"
-msgstr ""
+msgstr "跳过(_S)"
 
 #: ../data/soundconverter.glade.h:60
 msgid "aac"
@@ -230,52 +247,112 @@ msgid ""
 "artist/album\n"
 "artist - album"
 msgstr ""
+"艺人/专辑\n"
+"艺人 - 专辑"
 
 #: ../data/soundconverter.glade.h:63
-msgid "dialog1"
-msgstr ""
+#, fuzzy
+msgid "current file"
+msgstr "打开文件"
 
 #: ../data/soundconverter.glade.h:64
-msgid "flac"
-msgstr ""
+msgid "dialog1"
+msgstr "对话框1"
 
 #: ../data/soundconverter.glade.h:65
-msgid "mp3"
-msgstr ""
+msgid "flac"
+msgstr "flac"
 
 #: ../data/soundconverter.glade.h:66
-msgid "ogg"
-msgstr ""
+msgid "mp3"
+msgstr "mp3"
 
 #: ../data/soundconverter.glade.h:67
+msgid "ogg"
+msgstr "ogg"
+
+#: ../data/soundconverter.glade.h:68
 msgid ""
 "track_number - track_title\n"
 "track_title\n"
 msgstr ""
+"音轨号 - 音轨标题\n"
+"音轨标题\n"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../data/soundconverter.glade.h:71
+#: ../data/soundconverter.glade.h:72
 msgid "translator_credits"
 msgstr ""
-
-#: ../data/soundconverter.glade.h:72
-msgid "wav"
-msgstr ""
+"This is a dummy translation so that the credits are counted as translated.\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Anthony https://launchpad.net/~anthony-bu\n"
+"  Aron Xu https://launchpad.net/~happyaron\n"
+"  GautierPortet https://launchpad.net/~kassoulet\n"
+"  TaoFei https://launchpad.net/~taofei\n"
+"  bt4wang https://launchpad.net/~bt4wang\n"
+"  zhangmiao https://launchpad.net/~mymzhang\n"
+"  冯超 https://launchpad.net/~rainofchaos"
 
 #: ../data/soundconverter.glade.h:73
-msgid "~xxx kbps"
+msgid "wav"
+msgstr "wav"
+
+#: ../src/soundconverter.py:98
+msgid ""
+"Convert in batch mode, from command line, without a graphical user\n"
+" interface. You can use this from, say, shell scripts."
+msgstr ""
+
+#: ../src/soundconverter.py:103
+msgid ""
+"Show tags for input files instead of convertingthem. This indicates \n"
+" command line batch modeand disables the graphical user interface."
+msgstr ""
+
+#: ../src/soundconverter.py:107
+#, python-format
+msgid ""
+"Set the output MIME type for batch mode. The defaultis %s. Note that you "
+"probably want to set the outputsuffix as well."
+msgstr ""
+
+#: ../src/soundconverter.py:111
+msgid "Be quiet. Don't write normal output, only errors."
+msgstr "安静模式。仅输出错误。"
+
+#: ../src/soundconverter.py:113
+#, fuzzy
+msgid "Print additional debug information"
+msgstr "显示附加的调试信息"
+
+#: ../src/soundconverter.py:115
+#, python-format
+msgid ""
+"Set the output filename suffix for batch mode.The default is %s . Note that "
+"the suffix does notaffect\n"
+" the output MIME type."
+msgstr ""
+
+#: ../src/soundconverter.py:119
+msgid "Force number of concurrent conversions."
+msgstr ""
+
+#: ../src/soundconverter.py:121
+msgid "Show GStreamer Options"
 msgstr ""
 
 #. traductors: These are the custom filename patterns. Only if it does make sense.
-#: ../src/soundconverter.py:154
+#: ../src/soundconverter.py:240
+#, fuzzy
 msgid "Artist Album Title Track Total Genre Date Year Timestamp"
-msgstr ""
+msgstr "艺人 专辑 标题 音轨 总计 流派 日期 年份"
 
-#: ../src/soundconverter.py:188
+#: ../src/soundconverter.py:273
 msgid "All files"
 msgstr ""
 
-#: ../src/soundconverter.py:594
+#: ../src/soundconverter.py:674
 #, python-format
 msgid ""
 "\n"
@@ -288,11 +365,11 @@ msgstr ""
 "错误： %s\n"
 "%s\n"
 
-#: ../src/soundconverter.py:820
+#: ../src/soundconverter.py:842
 msgid "Internal error"
 msgstr "内部错误"
 
-#: ../src/soundconverter.py:821
+#: ../src/soundconverter.py:843
 msgid ""
 "Couldn't link GStreamer elements.\n"
 " Please report this as a bug."
@@ -300,12 +377,12 @@ msgstr ""
 "无法链结 GStreamer 元素。\n"
 " 请报告此臭虫。"
 
-#: ../src/soundconverter.py:826
+#: ../src/soundconverter.py:848
 #, python-format
 msgid "Unknown type %s"
 msgstr "未知类型 %s"
 
-#: ../src/soundconverter.py:827
+#: ../src/soundconverter.py:849
 #, python-format
 msgid ""
 "The file %s is of an unknown type.\n"
@@ -313,220 +390,228 @@ msgid ""
 " for files of this type if it is important\n"
 " to you."
 msgstr ""
+"文件 %s 为未知类型。\n"
+" 如果该文件类型对你很重要，\n"
+" 请向开发者寻求添加对该文件类型\n"
+" 的支持。"
 
-#: ../src/soundconverter.py:1133
+#: ../src/soundconverter.py:1165
 msgid "Target exists."
 msgstr "目标已经存在。"
 
-#: ../src/soundconverter.py:1134
+#: ../src/soundconverter.py:1166
 #, python-format
 msgid "The output file %s already exists."
-msgstr ""
+msgstr "输出文件 %s 已经存在。"
 
-#: ../src/soundconverter.py:1194
+#: ../src/soundconverter.py:1221
 #, python-format
 msgid "Cannot create a decoder for '%s' format."
-msgstr ""
+msgstr "无法创建“%s”格式的解码器。"
 
-#: ../src/soundconverter.py:1209
+#: ../src/soundconverter.py:1236
 #, python-format
 msgid "Cannot create '%s' folder."
 msgstr "无法创建文件夹：“%s”"
 
-#: ../src/soundconverter.py:1241
+#: ../src/soundconverter.py:1267
 msgid "GStreamer Error:"
 msgstr ""
 
-#: ../src/soundconverter.py:1385
+#: ../src/soundconverter.py:1418
 #, fuzzy
 msgid "Adding files..."
 msgstr "载入标签..."
 
-#: ../src/soundconverter.py:1450
+#: ../src/soundconverter.py:1477
+msgid "too much files, skipping tag reading."
+msgstr ""
+
+#: ../src/soundconverter.py:1498
+#, fuzzy
+msgid "Reading tags..."
+msgstr "载入标签..."
+
+#: ../src/soundconverter.py:1516
 msgid "loading tags..."
 msgstr "载入标签..."
 
-#: ../src/soundconverter.py:1452
+#: ../src/soundconverter.py:1518
 msgid "no tags"
 msgstr "无标签"
 
-#: ../src/soundconverter.py:1497
+#: ../src/soundconverter.py:1563
 msgid "unknown"
 msgstr "未知"
 
-#: ../src/soundconverter.py:1526
+#: ../src/soundconverter.py:1641
 msgid "Same as input, but replacing the suffix"
-msgstr ""
+msgstr "与输入文件相同，但替换前缀"
 
-#: ../src/soundconverter.py:1527
+#: ../src/soundconverter.py:1642
 msgid "Same as input, but with an additional suffix"
-msgstr ""
+msgstr "与输入文件相同，但添加后缀"
 
-#: ../src/soundconverter.py:1528
+#: ../src/soundconverter.py:1643
 msgid "Track number - title"
-msgstr ""
+msgstr "音轨号 - 标题"
 
-#: ../src/soundconverter.py:1529
+#: ../src/soundconverter.py:1644
 msgid "Track title"
-msgstr ""
+msgstr "音轨标题"
 
-#: ../src/soundconverter.py:1530
+#: ../src/soundconverter.py:1645
 msgid "Artist - title"
-msgstr ""
+msgstr "艺人 - 标题"
 
-#: ../src/soundconverter.py:1531
+#: ../src/soundconverter.py:1646
 msgid "Custom filename pattern"
 msgstr "自定义文件名模式"
 
-#: ../src/soundconverter.py:1535
+#: ../src/soundconverter.py:1650
 msgid "artist/album"
 msgstr "艺术家/专辑"
 
-#: ../src/soundconverter.py:1536
+#: ../src/soundconverter.py:1651
 msgid "artist-album"
 msgstr "艺术家－专辑"
 
-#: ../src/soundconverter.py:1537
+#: ../src/soundconverter.py:1652
 msgid "artist - album"
-msgstr ""
+msgstr "艺人 - 专辑"
 
-#: ../src/soundconverter.py:1599
+#: ../src/soundconverter.py:1703
 msgid "Available patterns:"
 msgstr ""
 
-#: ../src/soundconverter.py:1742
+#: ../src/soundconverter.py:1853
 #, python-format
 msgid "Into folder %s"
 msgstr "到文件夹 %s"
 
-#: ../src/soundconverter.py:1821
+#: ../src/soundconverter.py:1932
 #, python-format
 msgid "Target bitrate: %s"
-msgstr ""
+msgstr "目标比特率：%s"
 
-#: ../src/soundconverter.py:2135
+#: ../src/soundconverter.py:2234
+#, fuzzy
 msgid "Conversion Canceled"
-msgstr ""
+msgstr "转换已取消"
 
-#: ../src/soundconverter.py:2170
+#: ../src/soundconverter.py:2268
 msgid "Cannot overwrite source file(s)!"
 msgstr ""
 
-#: ../src/soundconverter.py:2183
+#: ../src/soundconverter.py:2281
 #, python-format
 msgid ""
 "The output file <i>%s</i>\n"
 " exists already.\n"
 " Do you want to skip the file, overwrite it or cancel the conversion?\n"
 msgstr ""
+"输出文件<i>%s</i>\n"
+" 已经存在。\n"
+" 您想要要跳过该文件，覆盖该文件还是取消转换？\n"
 
-#: ../src/soundconverter.py:2281
+#: ../src/soundconverter.py:2391
 #, python-format
 msgid "Conversion done, in %s"
-msgstr ""
+msgstr "转换完毕，耗时 %s"
 
-#: ../src/soundconverter.py:2317
+#: ../src/soundconverter.py:2427
 msgid "Open a file"
-msgstr ""
+msgstr "打开文件"
 
-#: ../src/soundconverter.py:2409
+#: ../src/soundconverter.py:2515
 msgid "Add Folder..."
-msgstr ""
+msgstr "添加文件夹..."
 
-#: ../src/soundconverter.py:2547
+#: ../src/soundconverter.py:2656
+#, fuzzy
 msgid "Conversion cancelled"
-msgstr ""
+msgstr "转换已取消"
 
-#: ../src/soundconverter.py:2570
+#: ../src/soundconverter.py:2679
 msgid "Waiting for tags"
-msgstr ""
-
-#: ../src/soundconverter.py:2577
-msgid "Waiting for tags..."
-msgstr ""
-
-#: ../src/soundconverter.py:2585 ../src/soundconverter.py:2598
-msgid "Paused"
-msgstr ""
-
-#: ../src/soundconverter.py:2602
-msgid "Canceled"
-msgstr ""
-
-#: ../src/soundconverter.py:2651
-#, python-format
-msgid "Converting file %d of %d  (%s)"
-msgstr ""
-
-#: ../src/soundconverter.py:2664
-msgid "Converting"
-msgstr ""
-
-#: ../src/soundconverter.py:2681
-#, python-format
-msgid "%d:%02d left"
-msgstr ""
+msgstr "等待标记"
 
 #: ../src/soundconverter.py:2686
-msgid "Ready"
-msgstr ""
+msgid "Waiting for tags..."
+msgstr "等待标记..."
 
-#: ../src/soundconverter.py:2767
+#: ../src/soundconverter.py:2694 ../src/soundconverter.py:2707
+msgid "Paused"
+msgstr "已暂停"
+
+#: ../src/soundconverter.py:2711
+msgid "Canceled"
+msgstr "已取消"
+
+#: ../src/soundconverter.py:2763
+#, python-format
+msgid "Converting file %d of %d  (%s)"
+msgstr "正在转换 %d/%d (%s)"
+
+#: ../src/soundconverter.py:2776
+msgid "Converting"
+msgstr "转换中"
+
+#: ../src/soundconverter.py:2797
+#, python-format
+msgid "%d:%02d left"
+msgstr "剩余 %d:%02d"
+
+#: ../src/soundconverter.py:2802
+msgid "Ready"
+msgstr "就绪"
+
+#: ../src/soundconverter.py:2887
 #, python-format
 msgid "%s: OK"
-msgstr ""
-
-#: ../src/soundconverter.py:2828
-#, python-format
-msgid "Usage: %s [options] [soundfile ...]"
-msgstr ""
-
-#: ../src/soundconverter.py:2843
-msgid "Print out a usage summary."
-msgstr ""
-
-#: ../src/soundconverter.py:2846
-msgid ""
-"Convert in batch mode, from command line, without a graphical user\n"
-" interface. You can use this from, say, shell scripts."
-msgstr ""
-
-#: ../src/soundconverter.py:2849
-#, python-format
-msgid ""
-"Set the output MIME type for batch mode. The default is\n"
-" %s . Note that you probably want to set\n"
-" the output suffix as well."
-msgstr ""
-
-#: ../src/soundconverter.py:2852
-msgid "Be quiet. Don't write normal output, only errors."
-msgstr ""
-
-#: ../src/soundconverter.py:2855
-msgid "Print additional debug information"
-msgstr ""
-
-#: ../src/soundconverter.py:2858
-#, python-format
-msgid ""
-"Set the output filename suffix for batch mode. The default is \n"
-" %s . Note that the suffix does not affect\n"
-" the output MIME type."
-msgstr ""
-
-#: ../src/soundconverter.py:2861
-msgid ""
-"Show tags for input files instead of converting them. This indicates \n"
-" command line batch mode and disables the graphical user interface."
-msgstr ""
-
-#: ../src/soundconverter.py:2864
-msgid "Force number of concurrent conversions."
-msgstr ""
+msgstr "%s：完成"
 
 #~ msgid "skipping: '%s'"
 #~ msgstr "跳过：“%s”"
 
 #~ msgid "Creating folder: '%s'"
 #~ msgstr "创建文件夹：“%s”"
+
+#~ msgid "Cannot set permission on '%s'"
+#~ msgstr "无法设置“%s”的权限"
+
+#~ msgid "file already present: '%s'"
+#~ msgstr "文件已经存在：“%s”"
+
+#~ msgid "canceling conversion."
+#~ msgstr "取消转换。"
+
+#~ msgid "Usage: %s [options] [soundfile ...]"
+#~ msgstr "用法：%s [选项] [音频文件 ...]"
+
+#~ msgid "Print out a usage summary."
+#~ msgstr "显示用法小结。"
+
+#~ msgid "FLAC"
+#~ msgstr "FLAC"
+
+#~ msgid "Free Lossless compression"
+#~ msgstr "自由无损压缩格式"
+
+#~ msgid "Free Lossy Compression"
+#~ msgstr "自由有损压缩格式"
+
+#~ msgid "MP3"
+#~ msgstr "MP3"
+
+#~ msgid "Non-Free Lossy Compression"
+#~ msgstr "非自由有损压缩格式"
+
+#~ msgid "Ogg Vorbis"
+#~ msgstr "Ogg Vorbis"
+
+#~ msgid "WAV"
+#~ msgstr "WAV"
+
+#~ msgid "_Remove"
+#~ msgstr "移除(_R)"
