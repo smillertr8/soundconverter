@@ -1,3 +1,6 @@
+2011-01-06  Gautier Portet <gautier soundconverter org>
+	* src/soundconverter.py: Finally got right the folder/subfolder creation. 
+
 2010-12-16  Gautier Portet <gautier soundconverter org>
 	* src/soundconverter.py: Fix unhandled exception when displaying 
 	 notifications.
@@ -31,7 +34,7 @@
 2010-06-24  Gautier Portet <kassoulet gmail com>
 	* src/soundconverter.py: Destination filename was url encoded when stored
 	  in gconf.
-	  (thanks Simón, fixes #17291)
+	  (thanks Simón, fixes #17302)
 
 2010-06-24  Gautier Portet <kassoulet gmail com>
 	* src/soundconverter.py: Fix track number/count missing when writing to

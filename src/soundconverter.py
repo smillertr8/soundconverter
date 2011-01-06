@@ -601,7 +601,7 @@ class TargetNameGenerator:
 		root = sound_file.get_base_path()
 		basename, ext = os.path.splitext(urllib.unquote(sound_file.get_filename()))
 
-		# make sure basename constains only the filename
+		# make sure basename contains only the filename
 		basefolder, basename = os.path.split(basename)
 
 		dict = {
@@ -642,10 +642,17 @@ class TargetNameGenerator:
 					s += c
 			result = s
 
+
 		if self.folder is None:
+			# same folder
 			folder = os.path.join(root, basefolder)
 		else:
-			folder = self.folder
+			if self.subfolders:
+				# destination folder + folders from tags
+				folder = self.folder
+			else:
+				# destination folder
+				folder = os.path.join(self.folder, basefolder)
 
 		result = os.path.join(folder, urllib.quote(result))
 
