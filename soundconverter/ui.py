@@ -1430,6 +1430,7 @@ class SoundConverterWindow(GladeWindow):
         self.filelist.hide_row_progress()
         self.status_frame.show()
         self.widget.set_sensitive(True)
+        self.converter.abort()
         try:
             from gi.repository import Unity
             launcher = Unity.LauncherEntry.get_for_desktop_id ("soundconverter.desktop")
