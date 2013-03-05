@@ -1328,6 +1328,7 @@ class SoundConverterWindow(GladeWindow):
 
     def tags_read(self, tagreader):
         sound_file = tagreader.get_sound_file()
+        self.waiting_for_tags -= 1
         self.do_add_file(sound_file)
 
     def on_progress(self):
@@ -1357,30 +1358,51 @@ class SoundConverterWindow(GladeWindow):
     def do_convert(self):
         self.conversion_error = None
         self.pulse_progress = -1
-        gobject.timeout_add(100, self.on_progress)
-        if self.prefs.require_tags:
-            self.progressbar.set_text(_('Reading tags...'))
-        else:
-            self.progressbar.set_text(_('Preparing conversion...'))
+        self.waiting_for_tags = 0
+        
+        # TODO: clean tasks queues?
+        # OK, so why are we even trying to do two things at the same time?
+        # just read tags. wait. and then convert...
+        
+        # we can't pause or cancel tag reading...'
+        # the errors are only displayed when tagreading is finished.
+        
         files = self.filelist.get_files()
+        gobject.timeout_add(1000, self.on_progress)
         total = len(files)
-        for i, sound_file in enumerate(files):
-            gtk_iteration()
-            self.pulse_progress = float(i)/total
-            sound_file.progress = None
-            if self.prefs.require_tags:
+        
+        if self.prefs.require_tags:
+            # read tags
+            self.progressbar.set_text(_('Reading tags...'))
+            for i, sound_file in enumerate(files):
+                self.pulse_progress = float(i)/total
+                gtk_iteration()
                 self.read_tags(sound_file)
-            else:
+                self.waiting_for_tags += 1
+
+            # wait for all tags to be read
+            while self.waiting_for_tags: # infinite loop, since we never change waiting_for_tags
+                gtk_sleep(0.1)
+                print 'waiting:', self.waiting_for_tags
+        else:
+            # now, start converting
+            self.progressbar.set_text(_('Preparing conversion...'))
+            for i, sound_file in enumerate(files):
+                gtk_iteration()
+                self.pulse_progress = float(i)/total
+                sound_file.progress = None
                 self.do_add_file(sound_file)
-            if self.conversion_error == CONVERSION_CANCELED:
-                log('cancelling conversion.')
-                self.conversion_ended()
-                self.set_status(_('Conversion cancelled'))
-                return
-            if self.conversion_error == CONVERSION_ERROR:
-                self.conversion_ended()
-                self.set_status(_('Error while converting'))
-                return
+                # TODO: what about codec install?
+                # TODO: what about errors when using tags?
+                if self.conversion_error == CONVERSION_CANCELED:
+                    log('cancelling conversion.')
+                    self.conversion_ended()
+                    self.set_status(_('Conversion cancelled'))
+                    return
+                if self.conversion_error == CONVERSION_ERROR:
+                    self.conversion_ended()
+                    self.set_status(_('Error while converting'))
+                    return
         # all was OK
         self.set_status('')
         self.pulse_progress = None
