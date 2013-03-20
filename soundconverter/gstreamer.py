@@ -681,7 +681,24 @@ class ConverterQueue(TaskQueue):
         self.error_count = 0
         self.all_tasks = None
 
+
     def add(self, sound_file):
+        self.waiting_tags = True
+        print 'tag reading ------------------------------'
+        tagreader = TagReader(sound_file)
+        #tagreader.set_found_tag_hook(self.tags_read)
+        tagreader.start()
+
+        import gtk, time
+
+        while tagreader.running:
+            while gtk.events_pending():
+                gtk.main_iteration(False)
+            print 'waiting tags...'
+            time.sleep(0.10)
+
+        print 'add --------------------------------------'
+
         output_filename = self.window.prefs.generate_filename(sound_file)
         path = urlparse(output_filename) [2]
         path = unquote_filename(path)
@@ -856,5 +873,7 @@ class ConverterQueue(TaskQueue):
         TaskQueue.abort(self)
         self.window.set_sensitive()
         self.reset_counters()
+
+
 
 

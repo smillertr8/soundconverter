@@ -1368,10 +1368,11 @@ class SoundConverterWindow(GladeWindow):
             gtk_iteration()
             self.pulse_progress = float(i)/total
             sound_file.progress = None
-            if self.prefs.require_tags:
-                self.read_tags(sound_file)
-            else:
-                self.do_add_file(sound_file)
+            #if self.prefs.require_tags:
+            #    self.read_tags(sound_file)
+            #else:
+            #    self.do_add_file(sound_file)
+            self.do_add_file(sound_file)
             if self.conversion_error == CONVERSION_CANCELED:
                 log('cancelling conversion.')
                 self.conversion_ended()
@@ -1384,6 +1385,7 @@ class SoundConverterWindow(GladeWindow):
         # all was OK
         self.set_status('')
         self.pulse_progress = None
+        print 'start ---------------------------------'
         self.converter.start()
         self.set_sensitive()
 
