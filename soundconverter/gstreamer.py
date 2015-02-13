@@ -208,11 +208,15 @@ class Pipeline(BackgroundTask):
         elif t == gst.MESSAGE_ELEMENT:
             st = message.structure
             if st and st.get_name().startswith('missing-'):
-                self.pipeline.set_state(gst.STATE_NULL)
                 if gst.pygst_version >= (0, 10, 10):
                     import gst.pbutils
                     detail = gst.pbutils.\
                         missing_plugin_message_get_installer_detail(message)
+                    mime_type = detail.split('|')[4].split(', ')[0]
+                    if 'video' in mime_type:
+                        debug('ignoring video codec: ', mime_type)
+                        return True
+                    self.pipeline.set_state(gst.STATE_NULL)
                     ctx = gst.pbutils.InstallPluginsContext()
                     gst.pbutils.install_plugins_async([detail], ctx,
                                                         self.install_plugin_cb)
