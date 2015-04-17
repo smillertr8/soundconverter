@@ -200,7 +200,7 @@ class Pipeline(BackgroundTask):
         t = message.type
         import gst
         if t == gst.MESSAGE_ERROR:
-            error, debug = message.parse_error()
+            error, debug_info = message.parse_error()
             self.eos = True
             self.on_error(error)
             self.done()
